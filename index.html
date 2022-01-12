@@ -4,10 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Projeto Individual</title>
   </head>
   <body>
-    <header>Meu projeto</header>
-    <section></section>
+    <header class="menu">
+      <h1>Controle financeiro</h1>
+    </header>
+    <section>
+      <form class="addTransacao" method="post" action="adicionar-transacao">
+        <div>
+          <label>Tipo de transação</label>
+          <br />
+          <select name="tipo de transação" id="transação">
+            <option value="compra">Compra</option>
+            <option value="venda">Venda</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Nome da mercadoria</label>
+          <br />
+          <input type="text" placeholder="Mercadoria" />
+        </div>
+
+        <div>
+          <label>Valor</label>
+          <br />
+          <input type="text" placeholder="R$ 0,00" />
+        </div>
+
+        <div>
+          <input type="button" value="Adicionar transação" />
+        </div>
+      </form>
+    </section>
   </body>
 </html>
