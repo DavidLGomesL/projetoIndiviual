@@ -12,10 +12,9 @@
       <h1>Controle financeiro</h1>
     </header>
     <section>
-      <form class="addTransacao" method="post" action="adicionar-transacao">
+      <form class="formulario">
         <div>
           <label>Tipo de transação</label>
-          <br />
           <select name="tipo de transação" id="transação">
             <option value="compra">Compra</option>
             <option value="venda">Venda</option>
@@ -23,19 +22,28 @@
         </div>
 
         <div>
-          <label>Nome da mercadoria</label>
-          <br />
-          <input type="text" placeholder="Mercadoria" />
+          <label for="nomeMercadoria">Nome da mercadoria</label>
+          <input
+            autofocus
+            type="text"
+            id="mercadoria"
+            placeholder="Mercadoria"
+          />
         </div>
 
         <div>
-          <label>Valor</label>
-          <br />
-          <input type="text" placeholder="R$ 0,00" />
+          <label for="valor">Valor</label>
+          <input type="text" id="valor" name="valor" placeholder="R$ 0,00" />
         </div>
 
         <div>
-          <input type="button" value="Adicionar transação" />
+          <button class="btn">Adicionar transação</button>
+        </div>
+
+        <div class="tabelaGeral">
+          <table>
+            <th>Extrato de transações</th>
+          </table>
         </div>
       </form>
     </section>
