@@ -6,10 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Projeto Individual</title>
+
+    <style>
+      @font-face {
+        font-family: 'latolight';
+        src: url('lato-light-webfont.woff2') format('woff2'),
+          url('lato-light-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
   </head>
   <body>
-    <header class="menu">
-      <h1>Controle financeiro</h1>
+    <header>
+      <div class="menuControlFinanc">
+        <h1>Controle financeiro</h1>
+      </div>
+
+      <div class="menu">
+        <ul class="navegação"></ul>
+        <ul class="menulist">
+          <li>
+            <a href="#">Cadastro de transações</a>
+          </li>
+          <div class="divisão">
+            <li>
+              <a href="#">Limpar dados</a>
+            </li>
+          </div>
+        </ul>
+      </div>
     </header>
     <section>
       <form class="formulario">
@@ -26,14 +52,14 @@
           <input
             autofocus
             type="text"
-            id="mercadoria"
+            id="nameMercadoria"
             placeholder="Mercadoria"
           />
         </div>
 
         <div>
           <label for="valor">Valor</label>
-          <input type="text" id="valor" name="valor" placeholder="R$ 0,00" />
+          <input type="text" id="addvalor" name="valor" placeholder="R$ 0,00" />
         </div>
 
         <div>
@@ -43,6 +69,24 @@
         <div class="tabelaGeral">
           <table>
             <th>Extrato de transações</th>
+
+            <th>
+              <td id="mercadoria">Mercadoria</td>
+              <td id="loremIpsumDolor">
+                lorem ipsum dolor sit amet consectetur
+              </td>
+              <td id="quisNostrud">Quis nostrud exercitation</td>
+              <td id="loremIpsum">lorem ipsum</td>
+              <td id="total">Total</td>
+            </th>
+
+            <th>
+              <td id="valor">Valor</td>
+              <td id="v1">R$ 12.999,99</td>
+              <td id="v2">R$ 99,99</td>
+              <td id="v3">R$ 9,99</td>
+              <td id="lucro">[Lucro]</td>
+            </th>
           </table>
         </div>
       </form>
