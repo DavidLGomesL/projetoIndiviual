@@ -31,13 +31,20 @@
       .numero .lucro {
         font-weight: normal;
       }
+
+      /*
+      .logo {
+        background-image: url('./assets/img/Ellipse 13.png');
+      }
+      */
     </style>
   </head>
   <body>
     <header>
-      <img src="./assets/img/Ellipse 13.png" alt="logo" />
-
       <div class="cabecalho">
+        <div class="logo">
+          <img src="./assets/img/Ellipse 13.png" alt="logo" />
+        </div>
         <div class="titulo">
           <h2>Controle financeiro</h2>
         </div>
@@ -52,40 +59,46 @@
       <div class="containerForm">
         <form class="formulario">
           <div class="formUm">
-            <label>Tipo de transação</label>
-            <select
-              class="btnSeleção"
-              style="font-size: 14px"
-              name="tipo de transação"
-              id="transação"
-            >
-              <option value="select">Selecione</option>
-              <option value="compra">Compra</option>
-              <option value="venda">Venda</option>
-            </select>
+            <div class="tTransacao">
+              <label>Tipo de transação</label>
+              <select
+                class="btnSelecao"
+                style="font-size: 14px"
+                name="tipo de transação"
+                id="transação"
+              >
+                <option value="select">Selecione</option>
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+              </select>
+            </div>
           </div>
 
           <div class="formUm">
-            <label for="nomeMercadoria">Nome da mercadoria</label>
-            <input
-              class="bordaFormUm"
-              type="text"
-              style="font-size: 18px"
-              required
-              id="nameMercadoria"
-              placeholder="Mercadoria"
-            />
+            <div class="nMercadoria">
+              <label for="nomeMercadoria">Nome da mercadoria</label>
+              <input
+                class="bordaFormUm"
+                type="text"
+                style="font-size: 16px"
+                required
+                id="nameMercadoria"
+                placeholder="Mercadoria"
+              />
+            </div>
           </div>
 
           <div class="formUm">
-            <label for="valor">Valor</label>
-            <input
-              class="bordaFormUm"
-              type="number"
-              style="font-size: 18px"
-              name="valor"
-              placeholder="R$ 0,00"
-            />
+            <div class="qValor">
+              <label for="valor">Valor</label>
+              <input
+                class="bordaFormUm"
+                type="number"
+                style="font-size: 16px"
+                name="valor"
+                placeholder="R$ 0,00"
+              />
+            </div>
           </div>
           <div>
             <button class="addTransacao">Adicionar transação</button>

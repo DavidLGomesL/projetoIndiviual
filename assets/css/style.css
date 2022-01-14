@@ -14,8 +14,9 @@ body {
   align-items: center;
 }
 
-img {
-  margin-left: -50px;
+.logo {
+  height: 27px;
+  width: 30px;
 }
 
 .titulo {
@@ -82,6 +83,16 @@ img {
   border-radius: 4px;
 }
 
+.formUm .nMercadoria {
+  display: flex;
+  flex-direction: column;
+}
+
+.formUm .qValor {
+  display: flex;
+  flex-direction: column;
+}
+
 .addTransacao {
   background-color: #333333;
   color: #fff;
@@ -123,6 +134,89 @@ td {
   width: 100%;
   text-align: left;
   border-bottom: 1px solid #979797;
+  border-spacing: 0px;
   padding-left: 40px;
   padding-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .titulo {
+    font-size: 12px;
+    margin-top: 25px;
+    margin-left: -40px;
+    margin-bottom: 23px;
+  }
+
+  .logo {
+    height: 44px;
+    width: 0px;
+    margin-left: -40px;
+    margin-right: -48px;
+  }
+
+  .menu {
+    margin-right: 55px;
+  }
+
+  .menu button {
+    width: 145px;
+    height: 31px;
+    font-size: 12px;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .containerForm {
+    display: block;
+  }
+
+  .formulario {
+    width: 635px;
+    height: 120px;
+    flex-direction: row;
+    margin-top: 120px;
+  }
+
+  .formUm {
+    font-size: 16px;
+  }
+
+  .formUm .btnSelecao {
+    width: 130px;
+    height: 28px;
+  }
+
+  .tTransacao {
+    display: flex;
+    flex-direction: column;
+    height: 25px;
+  }
+
+  .formUm .nMercadoria {
+    width: 265px;
+    height: 28px;
+  }
+
+  .formUm .qValor {
+    width: 150px;
+    height: 28px;
+    margin-left: -6px;
+  }
+
+  .addTransacao {
+    margin: 85px 15px 10px -180px;
+    width: 170px;
+    height: 32px;
+  }
+
+  .formTabela {
+    display: flex;
+    flex-direction: column;
+    width: 660px;
+    height: 120px;
+    margin-top: -83px;
+    margin-left: 5px;
+  }
 }
