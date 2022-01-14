@@ -102,7 +102,27 @@ img {
   flex-direction: column;
 }
 
+.extTransacoes {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 21px;
+}
+
 .tabelaGeral {
   display: flex;
   flex-direction: column;
+  max-width: 680px;
+  height: 281px;
+  margin-left: 20px;
+  top: 31px;
+}
+
+.tabelaGeral tr,
+th,
+td {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #979797;
+  padding-left: 40px;
+  padding-right: 20px;
 }
