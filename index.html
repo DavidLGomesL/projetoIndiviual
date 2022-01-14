@@ -15,81 +15,117 @@
         font-weight: normal;
         font-style: normal;
       }
+
+      .formUm valor {
+        text-transform: Capitalize;
+      }
+
+      .total {
+        font-weight: bold;
+      }
+
+      .numero {
+        font-weight: bold;
+      }
+
+      .numero .lucro {
+        font-weight: normal;
+      }
     </style>
   </head>
   <body>
     <header>
-      <div class="menuControlFinanc">
-        <h1>Controle financeiro</h1>
-      </div>
+      <img src="./assets/img/Ellipse 13.png" alt="logo" />
 
-      <div class="menu">
-        <ul class="navegação"></ul>
-        <ul class="menulist">
-          <li>
-            <a href="#">Cadastro de transações</a>
-          </li>
-          <div class="divisão">
-            <li>
-              <a href="#">Limpar dados</a>
-            </li>
-          </div>
-        </ul>
+      <div class="cabecalho">
+        <div class="titulo">
+          <h2>Controle financeiro</h2>
+        </div>
+
+        <div class="menu">
+          <button>Cadastro de transações</button>
+          <button>Limpar dados</button>
+        </div>
       </div>
     </header>
-    <section>
-      <form class="formulario">
-        <div>
-          <label>Tipo de transação</label>
-          <select name="tipo de transação" id="transação">
-            <option value="compra">Compra</option>
-            <option value="venda">Venda</option>
-          </select>
-        </div>
+    <section class="container">
+      <div class="containerForm">
+        <form class="formulario">
+          <div class="formUm">
+            <label>Tipo de transação</label>
+            <select class="btnSeleção" name="tipo de transação" id="transação">
+              <option value="select">Selecione</option>
+              <option value="compra">Compra</option>
+              <option value="venda">Venda</option>
+            </select>
+          </div>
 
-        <div>
-          <label for="nomeMercadoria">Nome da mercadoria</label>
-          <input
-            autofocus
-            type="text"
-            id="nameMercadoria"
-            placeholder="Mercadoria"
-          />
-        </div>
+          <div class="formUm">
+            <label for="nomeMercadoria">Nome da mercadoria</label>
+            <input
+              class="bordaFormUm"
+              autofocus
+              type="text"
+              required
+              id="nameMercadoria"
+              placeholder="Mercadoria"
+            />
+          </div>
 
-        <div>
-          <label for="valor">Valor</label>
-          <input type="text" id="addvalor" name="valor" placeholder="R$ 0,00" />
-        </div>
+          <div class="formUm">
+            <label for="valor">Valor</label>
+            <input
+              class="bordaFormUm"
+              type="number"
+              name="valor"
+              placeholder="R$ 0,00"
+            />
+          </div>
+          <div>
+            <button class="addTransacao">Adicionar transação</button>
+          </div>
+        </form>
+      </div>
 
-        <div>
-          <button class="btn">Adicionar transação</button>
-        </div>
+      <div>
+        <form class="formTabela">
+          <div class="tabelaGeral">
+            <table>
+              <th>Extrato de transações</th>
 
-        <div class="tabelaGeral">
-          <table>
-            <th>Extrato de transações</th>
+              <br />
 
-            <th>
-              <td id="mercadoria">Mercadoria</td>
-              <td id="loremIpsumDolor">
-                lorem ipsum dolor sit amet consectetur
-              </td>
-              <td id="quisNostrud">Quis nostrud exercitation</td>
-              <td id="loremIpsum">lorem ipsum</td>
-              <td id="total">Total</td>
-            </th>
+              <tr>
+                <th class="mercadoriaEValor" id="mercadoria">Mercadoria</th>
+                <th id="valor">Valor</th>
+              </tr>
+              <tr>
+                <td class="mercadoriaEValor" id="loremIpsumDolor">
+                  + lorem ipsum dolor sit amet consectetur
+                </td>
+                <td id="v1">R$ 12.999,99</td>
+              </tr>
+              <tr>
+                <td id="quisNostrud">- Quis nostrud exercitation</td>
+                <td id="v2">R$ 99,99</td>
+              </tr>
 
-            <th>
-              <td id="valor">Valor</td>
-              <td id="v1">R$ 12.999,99</td>
-              <td id="v2">R$ 99,99</td>
-              <td id="v3">R$ 9,99</td>
-              <td id="lucro">[Lucro]</td>
-            </th>
-          </table>
-        </div>
-      </form>
+              <tr>
+                <td id="loremIpsum">+ lorem ipsum</td>
+                <td id="v3">R$ 9,99</td>
+              </tr>
+
+              <tr>
+                <td class="total">Total</td>
+                <td class="numero">
+                  R$ 12.909,99
+                  <span class="lucro">[Lucro]</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
     </section>
   </body>
 </html>

@@ -1,6 +1,82 @@
 body {
-  width: 100%;
-  height: 250px;
-  margin-bottom: 15px;
   font-family: 'latolight';
+}
+
+/*Cabeçalho e Menu*/
+.cabecalho {
+  display: flex;
+  position: fixed;
+  width: 101%;
+  height: 80px;
+  top: 0px;
+  background-color: #ddd;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  margin-left: -50px;
+}
+
+.titulo {
+  margin-left: -200px;
+  margin-bottom: 23px;
+  font-size: 20px;
+}
+
+.menu button {
+  width: 250px;
+  height: 40px;
+  border: 2px solid #979797;
+  margin-right: -4px;
+  border-bottom: none;
+  border-left: none;
+  border-top: none;
+  font-size: 16px;
+  color: #333333;
+  cursor: pointer;
+}
+
+/*Conjunto formulario e tabela*/
+.container {
+  display: flex;
+}
+
+.containerForm {
+  width: 440px;
+}
+
+/*Primeiro formulario*/
+.formulario {
+  display: flex;
+  padding: 10px;
+  margin-top: 20px;
+  flex-direction: column;
+  width: 400px;
+  border: 1px solid black;
+}
+
+.formulario .formUm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bordaFormUm {
+  border: 1px solid black;
+}
+
+/*Formulario dois*/
+.formTabela {
+  width: 680px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+.tabelaGeral {
+  display: flex;
+  flex-direction: column;
 }
