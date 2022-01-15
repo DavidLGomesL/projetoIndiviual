@@ -31,12 +31,6 @@
       .numero .lucro {
         font-weight: normal;
       }
-
-      /*
-      .logo {
-        background-image: url('./assets/img/Ellipse 13.png');
-      }
-      */
     </style>
   </head>
   <body>
@@ -50,8 +44,10 @@
         </div>
 
         <div class="menu">
-          <button>Cadastro de transações</button>
-          <button>Limpar dados</button>
+          <button class="cadTransacoes">
+            <strong>Cadastro de transações</strong>
+          </button>
+          <button class="limparDados"><strong>Limpar dados</strong></button>
         </div>
       </div>
     </header>
@@ -63,7 +59,6 @@
               <label>Tipo de transação</label>
               <select
                 class="btnSelecao"
-                style="font-size: 14px"
                 name="tipo de transação"
                 id="transação"
               >
@@ -78,9 +73,8 @@
             <div class="nMercadoria">
               <label for="nomeMercadoria">Nome da mercadoria</label>
               <input
-                class="bordaFormUm"
+                class="bordaMercadoria"
                 type="text"
-                style="font-size: 16px"
                 required
                 id="nameMercadoria"
                 placeholder="Mercadoria"
@@ -92,9 +86,8 @@
             <div class="qValor">
               <label for="valor">Valor</label>
               <input
-                class="bordaFormUm"
+                class="bordaValor"
                 type="number"
-                style="font-size: 16px"
                 name="valor"
                 placeholder="R$ 0,00"
               />

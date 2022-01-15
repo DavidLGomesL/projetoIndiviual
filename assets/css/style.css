@@ -17,18 +17,36 @@ body {
 .logo {
   height: 50px;
   width: 30px;
-  margin-left: -156px;
+  margin-left: -41px;
 }
 
 .titulo {
   height: 62px;
-  margin-left: -386px;
+  margin-left: 26%;
   margin-bottom: 23px;
   font-size: 20px;
 }
 
-.menu button {
-  width: 250px;
+.menu {
+  margin-right: -27px;
+  margin-left: 35px;
+}
+
+.menu .cadTransacoes {
+  width: 197px;
+  height: 40px;
+  border: 2px solid #979797;
+  margin-right: -4px;
+  border-bottom: none;
+  border-left: none;
+  border-top: none;
+  font-size: 16px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.menu .limparDados {
+  width: 197px;
   height: 40px;
   border: 2px solid #979797;
   margin-right: -4px;
@@ -47,6 +65,7 @@ body {
 /*Conjunto formulario e tabela*/
 .container {
   display: flex;
+  flex-direction: column;
 }
 
 .containerForm {
@@ -60,10 +79,11 @@ body {
 .formulario {
   display: flex;
   padding: 10px;
-  margin-top: 50px;
-  flex-direction: column;
-  width: 400px;
-  height: 344px;
+  margin-top: 70px;
+  margin-left: 197px;
+  flex-direction: row;
+  width: 967px;
+  height: 160px;
   border-radius: 4px;
   border: 1px solid #979797;
 }
@@ -75,29 +95,49 @@ body {
   width: 370px;
   height: 50px;
   top: 25px;
-  font-size: 20px;
+  font-size: 24px;
   background-color: #fff;
   margin: 10px 15px 10px 15px;
-}
-
-.bordaFormUm {
-  border: 1px solid #979797;
-  border-radius: 4px;
 }
 
 .tTransacao {
   display: flex;
   flex-direction: column;
+  margin-left: 8px;
 }
 
-.formUm .nMercadoria {
-  display: flex;
-  flex-direction: column;
+.btnSelecao {
+  width: 195px;
+  height: 32px;
+  font-size: 18px;
 }
 
-.formUm .qValor {
+.nMercadoria {
   display: flex;
   flex-direction: column;
+  margin-left: -73px;
+}
+
+.bordaMercadoria {
+  border: 1px solid #979797;
+  border-radius: 4px;
+  width: 363px;
+  height: 32px;
+  font-size: 18px;
+}
+
+.qValor {
+  display: flex;
+  flex-direction: column;
+  margin-left: 42px;
+}
+
+.bordaValor {
+  border: 1px solid #979797;
+  border-radius: 4px;
+  width: 235px;
+  height: 32px;
+  font-size: 18px;
 }
 
 .addTransacao {
@@ -105,23 +145,24 @@ body {
   color: #fff;
   border: 1px solid;
   border-radius: 4px;
-  margin: 10px 15px 10px 15px;
-  width: 370px;
-  height: 32px;
+  margin: 88px 15px 10px -267px;
+  width: 246px;
+  height: 42px;
   border-radius: 4px;
+  font-size: 18px;
 }
 
 /*Formulario dois (Tabela)*/
 .formTabela {
-  width: 680px;
+  width: 930px;
   display: flex;
-  margin-top: 32px;
-  margin-left: 20px;
+  margin-top: -50px;
+  margin-left: 229px;
   flex-direction: column;
 }
 
 .extTransacoes {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   margin-top: 104px;
 }
@@ -129,10 +170,11 @@ body {
 .tabelaGeral {
   display: flex;
   flex-direction: column;
-  max-width: 680px;
+  max-width: 1000px;
   height: 281px;
   margin-left: 20px;
   top: 31px;
+  font-size: 18px;
 }
 
 .tabelaGeral tr,
@@ -146,91 +188,105 @@ td {
   padding-right: 20px;
 }
 
-@media screen and (min-width: 1900px) {
-  .logo {
-    height: 50px;
-    width: 30px;
-    margin-left: -119px;
+@media screen and (max-width: 1112px) {
+  .titulo {
+    margin-left: -108px;
+    margin-right: -24px;
   }
 
-  .titulo {
-    height: 62px;
-    margin-left: 284px;
-    margin-right: -60px;
-    margin-bottom: 23px;
+  .logo {
+    margin-left: -84px;
+    margin-right: -71px;
   }
 
   .menu {
-    margin-right: 8px;
+    margin-left: 150px;
+    margin-right: -74px;
   }
 
-  .menu button {
-    font-size: 18px;
+  .menu .limparDados {
+    width: 145px;
+    margin-right: 32px;
   }
 
   .formulario {
-    margin-left: 345px;
+    margin-left: 81px;
     margin-top: 86px;
-    width: 415px;
+    width: 820px;
   }
 
-  .tTransacao {
-    height: 10px;
-    margin-left: 12px;
-  }
-
-  .nMercadoria {
-    height: 10px;
-    margin-left: 12px;
-  }
-
-  .qValor {
-    height: 10px;
-    margin-left: 12px;
-  }
-
-  .addTransacao {
-    margin: 54px 15px 10px 16px;
-    font-size: 14px;
-  }
-
-  .formTabela {
-    margin-left: 384px;
-    margin-top: 74px;
+  .formUm {
+    margin-top: 28px;
     font-size: 18px;
   }
 
-  .extTransacoes {
-    font-size: 20px;
+  .btnSelecao {
+    font-size: 14px;
+    height: 28px;
+    width: 135px;
   }
-}
 
-@media screen and (max-width: 1112px) {
+  .bordaMercadoria {
+    font-size: 14px;
+    width: 285px;
+    height: 28px;
+  }
+
+  .qValor {
+    margin-left: 14px;
+  }
+
+  .bordaValor {
+    font-size: 14px;
+    height: 28px;
+  }
+
+  .addTransacao {
+    height: 40px;
+    font-size: 16px;
+    margin: 106px 15px 10px -261px;
+  }
+
+  .formTabela {
+    margin-left: 109px;
+    margin-top: -69px;
+  }
+
+  .extTransacoes {
+    margin-left: -40px;
+  }
+
+  .tabelaGeral {
+    width: 836px;
+    margin-left: -7px;
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .titulo {
-    font-size: 12px;
-    margin-top: 25px;
-    margin-left: -40px;
-    margin-bottom: 23px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 270px;
+    margin-right: -173px;
+    margin-bottom: 9px;
   }
 
   .logo {
     height: 44px;
-    width: 0px;
-    margin-left: -40px;
-    margin-right: -48px;
+    margin-left: -65px;
+    margin-right: -400px;
   }
 
   .menu {
-    margin-right: 55px;
+    margin-left: 184px;
+    margin-right: -79px;
   }
 
   .menu button {
-    width: 145px;
+    width: 209px;
     height: 31px;
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .container {
@@ -238,54 +294,88 @@ td {
   }
 
   .containerForm {
-    display: block;
+    display: flex;
+    margin: 0px 20px 0px -8px;
   }
 
   .formulario {
-    width: 635px;
-    height: 120px;
+    width: 710px;
+    height: 121px;
+    display: flex;
     flex-direction: row;
-    margin-top: 120px;
+    margin-top: 100px;
+    margin-left: 17px;
   }
 
   .formUm {
+    margin-top: 8px;
+    margin-left: 19px;
     font-size: 16px;
-  }
-
-  .formUm .btnSelecao {
-    width: 130px;
-    height: 28px;
   }
 
   .tTransacao {
     display: flex;
     flex-direction: column;
     height: 25px;
+    margin-left: -4px;
+    font-size: 16px;
   }
 
-  .formUm .nMercadoria {
-    width: 265px;
-    height: 28px;
+  .btnSelecao {
+    width: 149px;
+    height: 25px;
+    font-size: 14px;
   }
 
-  .formUm .qValor {
-    width: 150px;
+  .nMercadoria {
+    width: 144px;
+    height: 22px;
+    margin-left: -70px;
+    font-size: 16px;
+  }
+
+  .bordaMercadoria {
+    width: 296px;
     height: 28px;
-    margin-left: -6px;
+    font-size: 14px;
+  }
+
+  .qValor {
+    width: 228px;
+    height: 23px;
+    margin-left: 18px;
+    margin-right: -40px;
+    font-size: 16px;
+  }
+
+  .bordaValor {
+    height: 28px;
+    width: 160px;
+    font-size: 14px;
   }
 
   .addTransacao {
-    margin: 85px 15px 10px -180px;
-    width: 170px;
-    height: 32px;
+    margin: 79px 15px 10px -215px;
+    width: 179px;
+    height: 35px;
+    font-size: 14px;
   }
 
   .formTabela {
     display: flex;
     flex-direction: column;
-    width: 660px;
+    width: 753px;
     height: 120px;
-    margin-top: -83px;
+    margin-top: -70px;
     margin-left: 5px;
+  }
+
+  .extTransacoes {
+    font-size: 16px;
+  }
+
+  .tabelaGeral {
+    width: 704px;
+    font-size: 14px;
   }
 }
