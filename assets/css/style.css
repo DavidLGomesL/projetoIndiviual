@@ -435,9 +435,10 @@ td {
   }
 
   .nMercadoria {
-    width: 144px;
+    width: 228px;
     height: 22px;
     margin-left: -67px;
+    margin-top: 15px;
     font-size: 16px;
   }
 
@@ -452,6 +453,7 @@ td {
     height: 23px;
     margin-left: -67px;
     margin-right: -40px;
+    margin-top: 15px;
     font-size: 16px;
   }
 
