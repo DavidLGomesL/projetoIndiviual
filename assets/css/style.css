@@ -379,3 +379,111 @@ td {
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .titulo {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 270px;
+    margin-right: -199px;
+    margin-bottom: 8px;
+  }
+
+  .logo {
+    height: 44px;
+    margin-left: -65px;
+    margin-right: -400px;
+  }
+
+  .menu {
+    margin-left: 60px;
+    margin-right: -79px;
+  }
+
+  .menu .cadTransacoes {
+    width: 173px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .menu .limparDados {
+    width: 145px;
+    height: 32px;
+    margin-right: 32px;
+    font-size: 14px;
+  }
+
+  .formulario {
+    border: none;
+    flex-direction: column;
+    margin-left: 193px;
+  }
+
+  .tTransacao {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+    height: 25px;
+    margin-left: -67px;
+  }
+
+  .btnSelecao {
+    width: 377px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .nMercadoria {
+    width: 144px;
+    height: 22px;
+    margin-left: -67px;
+    font-size: 16px;
+  }
+
+  .bordaMercadoria {
+    width: 371px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .qValor {
+    width: 228px;
+    height: 23px;
+    margin-left: -67px;
+    margin-right: -40px;
+    font-size: 16px;
+  }
+
+  .bordaValor {
+    width: 371px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .addTransacao {
+    margin: 26px 0px 0px 44px;
+    width: 179px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .formTabela {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 120px;
+    margin-top: -27px;
+    margin-left: 153px;
+  }
+
+  .extTransacoes {
+    font-size: 16px;
+    margin-left: -148px;
+  }
+
+  .tabelaGeral {
+    width: 371px;
+    font-size: 14px;
+  }
+}
