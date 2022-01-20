@@ -30,6 +30,7 @@ body {
 .menu {
   width: 100%;
   height: 40px;
+  margin-right: -300px;
   border: 2px solid #979797;
   border-bottom: none;
   border-left: none;
@@ -65,12 +66,12 @@ body {
 /*Primeiro formulario*/
 .formulario {
   display: flex;
-  padding: 10px;
+  padding: 20px;
   margin-top: 70px;
-  margin-left: 197px;
-  flex-direction: row;
-  width: 967px;
-  height: 160px;
+  margin-left: 200px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
   border: 1px solid #979797;
 }
@@ -80,53 +81,88 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 370px;
-  height: 50px;
   top: 25px;
-  font-size: 24px;
+  font-size: 17px;
   background-color: #fff;
   margin: 10px 15px 10px 15px;
 }
 
-.bordaValor {
+.tTransacao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.btnSelecao {
+  display: flex;
+  width: 111%;
+  height: 37px;
   border: 1px solid #979797;
   border-radius: 4px;
-  width: 235px;
-  height: 32px;
-  font-size: 18px;
+  font-size: 14px;
+}
+
+.nMercadoria {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.btnMercadoria {
+  display: flex;
+  width: 110%;
+  height: 35px;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.qValor {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.btnValor {
+  display: flex;
+  width: 110%;
+  height: 35px;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
 .addTransacao {
-  background-color: #333333;
-  color: #fff;
+  width: 94%;
+  height: 40px;
   border: 1px solid;
   border-radius: 4px;
-  margin: 88px 15px 10px -267px;
-  width: 246px;
-  height: 42px;
-  border-radius: 4px;
-  font-size: 18px;
+  margin: 10px 15px 10px 13px;
+  font-size: 16px;
+  background-color: #333333;
+  color: #fff;
 }
 
 /*Formulario dois (Tabela)*/
 .formTabela {
-  width: 930px;
+  width: 45%;
   display: flex;
-  margin-top: -50px;
-  margin-left: 229px;
   flex-direction: column;
+  text-align: center;
+  margin: -450px 0px 0px 705px;
 }
 
 .extTransacoes {
-  font-size: 20px;
-  text-align: center;
+  width: 100%;
   margin-top: 104px;
+  font-size: 20px;
 }
 
 .tabelaGeral {
   display: flex;
   flex-direction: column;
   max-width: 1000px;
-  height: 281px;
+  height: 100%;
   margin-left: 20px;
   top: 31px;
   font-size: 18px;
