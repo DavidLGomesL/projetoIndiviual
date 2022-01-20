@@ -39,8 +39,14 @@ body {
   cursor: pointer;
 }
 
+.cadTransacoes {
+  height: 40px;
+}
+
 .limparDados {
   width: 167px;
+  height: 40px;
+  margin-left: -4px;
 }
 
 /*Conjunto formulario e tabela*/
