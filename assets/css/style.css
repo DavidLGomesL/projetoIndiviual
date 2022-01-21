@@ -1,11 +1,14 @@
 body {
+  display: flex;
+  width: 100%;
+  margin: 0px;
   font-family: 'Lato';
 }
 
 /*Cabeçalho e Menu*/
 .cabecalho {
   display: flex;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 80px;
   top: 0px;
@@ -30,7 +33,7 @@ body {
 .menu {
   width: 100%;
   height: 40px;
-  margin-right: -300px;
+  margin-right: 0px;
   border: 2px solid #979797;
   border-bottom: none;
   border-left: none;
@@ -71,7 +74,7 @@ body {
   margin-left: 200px;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 80%;
   border-radius: 4px;
   border: 1px solid #979797;
 }
@@ -137,7 +140,7 @@ body {
   height: 40px;
   border: 1px solid;
   border-radius: 4px;
-  margin: 10px 15px 10px 13px;
+  margin: 20px 15px 10px 13px;
   font-size: 16px;
   background-color: #333333;
   color: #fff;
@@ -145,15 +148,15 @@ body {
 
 /*Formulario dois (Tabela)*/
 .formTabela {
-  width: 45%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: -450px 0px 0px 705px;
+  margin: -450px 0px 0px 662px;
 }
 
 .extTransacoes {
-  width: 100%;
+  width: 66%;
   margin-top: 104px;
   font-size: 20px;
 }
@@ -162,8 +165,9 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1000px;
+  width: 55%;
   height: 100%;
-  margin-left: 20px;
+  margin-left: 62px;
   top: 31px;
   font-size: 18px;
 }
