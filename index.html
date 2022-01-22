@@ -37,37 +37,45 @@
     -->
     <section>
         <form class="formulario">
-          <h1>Nova transação</h1>
+          <h1 class="tituloAdTransacao">Nova transação</h1>
             <div class="formUm">
-              <label>Tipo de transação</label>
-              <select
-                name="tipo de transação"
-                id="transação"
-              >
-                <option value="select">Selecione</option>
-                <option value="compra">Compra</option>
-                <option value="venda">Venda</option>
-              </select>
+              <div class="formUmTt">
+                <label>Tipo de transação</label>
+                <select
+                  name="tipo de transação"
+                  id="transação"
+                >
+                  <option value="select">Selecione</option>
+                  <option value="compra">Compra</option>
+                  <option value="venda">Venda</option>
+                </select>
+              </div>
             </div>
 
             <div class="formUm">
-              <label for="nomeMercadoria">Nome da mercadoria</label>
-              <input
-                type="text"
-                required
-                id="nameMercadoria"
-                placeholder="Mercadoria"
-              />
+              <div class="formUmMercadoria">
+                <label for="nomeMercadoria">Nome da mercadoria</label>
+                <input
+                  class="btnMercadoria"
+                  type="text"
+                  required
+                  id="nameMercadoria"
+                  placeholder="Mercadoria"
+                />
+              </div>
             </div>
 
             <div class="formUm">
+              <div class="formUmValor">
               <label for="valor">Valor</label>
-              <input
-                type="number"
-                required
-                name="valor"
-                placeholder="R$ 0,00"
-              />
+                <input
+                  class="btnValor"
+                  type="number"
+                  required
+                  name="valor"
+                  placeholder="R$ 0,00"
+                />
+              </div>
             </div>
           <div>
             <button>Adicionar transação</button>

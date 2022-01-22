@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   font-size: 12px;
   margin: 20px 0px 0px 17px;
+  justify-content: center;
 }
 
 .formUm {
@@ -23,6 +24,8 @@ body {
 }
 
 .formulario select {
+  border: 1px solid #979797;
+  border-radius: 4px;
   color: black;
   height: 15px;
   font-size: 10px;
@@ -42,6 +45,84 @@ body {
   background-color: #333333;
   color: #fff;
   border: 1px solid #979797;
+  border-radius: 4px;
   margin-top: 19.78px;
   font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .formulario {
+    position: absolute;
+    flex-direction: row;
+    flex-flow: wrap;
+    width: 728px;
+    height: 189px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+  }
+
+  .tituloAdTransacao {
+    position: absolute;
+  }
+
+  .formulario h1 {
+    display: flex;
+  }
+
+  .formUm {
+    font-size: 14px;
+    margin-left: 18px;
+    margin-top: 70px;
+  }
+
+  .formUmTt {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formUmTt label {
+    margin-left: -14px;
+  }
+
+  .formulario select {
+    font-size: 12px;
+    width: 138px;
+    height: 32px;
+    margin-left: -15px;
+  }
+
+  .formulario input {
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .formUmMercadoria {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formUmMercadoria label {
+    margin-left: 22px;
+  }
+
+  .btnMercadoria {
+    width: 310px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .formUmValor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btnValor {
+    width: 135px;
+  }
+
+  .formulario button {
+    height: 32px;
+    width: 200px;
+    margin: 0px -225px 0px 248px;
+  }
 }
