@@ -1,3 +1,43 @@
 body {
+  display: flex;
+  width: 100%;
+  margin: 0px;
   font-family: 'Lato';
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  margin: 20px 0px 0px 17px;
+}
+
+.formUm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.formulario select {
+  color: black;
+  height: 15px;
+  font-size: 10px;
+}
+
+.formulario input {
+  background-color: #fff;
+  color: #e0e0e0;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  height: 15px;
+  font-size: 10px;
+}
+
+.formulario button {
+  width: 100%;
+  background-color: #333333;
+  color: #fff;
+  border: 1px solid #979797;
+  margin-top: 19.78px;
+  font-size: 10px;
 }

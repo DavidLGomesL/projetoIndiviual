@@ -15,50 +15,31 @@
         font-weight: normal;
         font-style: normal;
       }
-
-      .formUm valor {
-        text-transform: Capitalize;
-      }
-
-      .total {
-        font-weight: bold;
-      }
-
-      .numero {
-        font-weight: bold;
-      }
-
-      .numero .lucro {
-        font-weight: normal;
-      }
     </style>
   </head>
   <body>
     <header>
-      <div class="cabecalho">
-        <div class="logo">
-          <img src="./assets/img/Ellipse 13.png" alt="logo" />
-        </div>
-        <div class="titulo">
-          <h2>Controle Financeiro</h2>
-        </div>
+      <!--
+      <div class="logo">
+        <img src="./assets/img/Ellipse 13.png" alt="logo" />
+      </div>
+      <div class="titulo">
+        <h2>Controle Financeiro</h2>
+      </div>
 
-        <div class="menu">
-          <button class="cadTransacoes">
-            <strong>Cadastro de transações</strong>
-          </button>
-          <button class="limparDados"><strong>Limpar dados</strong></button>
-        </div>
+      <div class="menu">
+        <ul>
+          <li>Cadastro de transações</li>
+          <li>Limpar dados</li>
+        </ul>
       </div>
     </header>
-    <section class="container">
-      <div class="containerForm">
+    -->
+    <section>
         <form class="formulario">
-          <div class="formUm">
-            <div class="tTransacao">
+            <div class="formUm">
               <label>Tipo de transação</label>
               <select
-                class="btnSelecao"
                 name="tipo de transação"
                 id="transação"
               >
@@ -67,39 +48,32 @@
                 <option value="venda">Venda</option>
               </select>
             </div>
-          </div>
 
-          <div class="formUm">
-            <div class="nMercadoria">
+            <div class="formUm">
               <label for="nomeMercadoria">Nome da mercadoria</label>
               <input
-                class="btnMercadoria"
                 type="text"
                 required
                 id="nameMercadoria"
                 placeholder="Mercadoria"
               />
             </div>
-          </div>
 
-          <div class="formUm">
-            <div class="qValor">
+            <div class="formUm">
               <label for="valor">Valor</label>
               <input
-                class="btnValor"
                 type="number"
                 required
                 name="valor"
                 placeholder="R$ 0,00"
               />
             </div>
-          </div>
           <div>
-            <button class="addTransacao">Adicionar transação</button>
+            <button>Adicionar transação</button>
           </div>
         </form>
       </div>
-
+      <!--
       <div>
         <form class="formTabela">
           <h2 class="extTransacoes">Extrato de transações</h2>
@@ -135,6 +109,7 @@
           </table>
         </form>
       </div>
+      -->
     </section>
   </body>
 </html>
