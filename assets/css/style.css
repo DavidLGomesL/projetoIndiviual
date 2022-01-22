@@ -126,3 +126,66 @@ body {
     margin: 0px -225px 0px 248px;
   }
 }
+
+@media screen and (min-width: 1112px) {
+  .formulario {
+    position: absolute;
+    flex-direction: column;
+    width: 400px;
+    height: 344px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+  }
+
+  .tituloAdTransacao {
+    margin: 20px 124px 301px;
+    justify-content: center;
+    width: 150px;
+    height: 20px;
+  }
+
+  .formUm {
+    margin-top: 70px;
+    font-size: 16px;
+  }
+
+  .formUmTt {
+    margin-left: 14.9px;
+    margin-top: -46px;
+  }
+
+  .formulario select {
+    width: 364.2px;
+  }
+
+  .formulario input {
+    font-size: 14px;
+  }
+
+  .formUmMercadoria {
+    margin-left: 14.9px;
+    margin-top: -50px;
+  }
+
+  .formUmMercadoria label {
+    margin-left: -14.2px;
+  }
+
+  .btnMercadoria {
+    margin-left: -14.2px;
+    width: 357.2px;
+  }
+
+  .formUmValor {
+    margin-top: -50px;
+  }
+
+  .btnValor {
+    width: 357.2px;
+  }
+
+  .formulario button {
+    width: 363.2px;
+    margin: 20.78px 0px 0px 18px;
+  }
+}
