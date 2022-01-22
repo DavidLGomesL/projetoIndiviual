@@ -18,6 +18,10 @@ body {
   margin-top: 15px;
 }
 
+.formulario h1 {
+  display: none;
+}
+
 .formulario select {
   color: black;
   height: 15px;
