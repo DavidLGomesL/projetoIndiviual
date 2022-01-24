@@ -1,34 +1,54 @@
 body {
-  display: flex;
   width: 100%;
   margin: 0px;
+  font-size: 14px;
   font-family: 'Lato';
 }
 
 .formulario {
   display: flex;
   flex-direction: column;
-  font-size: 12px;
-  margin: 20px 0px 0px 17px;
+  width: 100%;
+  justify-content: center;
+}
+
+.ttMercValorAdd {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   justify-content: center;
 }
 
 .formUm {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin: 20px 20px 0px 20px;
 }
 
 .formulario h1 {
   display: none;
 }
 
+.formUmTt {
+  display: flex;
+  flex-direction: column;
+}
+
+.formUmMercadoria {
+  display: flex;
+  flex-direction: column;
+}
+
+.formUmValor {
+  display: flex;
+  flex-direction: column;
+}
+
 .formulario select {
   border: 1px solid #979797;
   border-radius: 4px;
   color: black;
-  height: 15px;
-  font-size: 10px;
+  height: 32px;
 }
 
 .formulario input {
@@ -36,156 +56,120 @@ body {
   color: #e0e0e0;
   border: 1px solid #979797;
   border-radius: 4px;
-  height: 15px;
-  font-size: 10px;
+  height: 32px;
 }
 
 .formulario button {
-  width: 100%;
   background-color: #333333;
   color: #fff;
   border: 1px solid #979797;
   border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 19.78px;
-  font-size: 10px;
+  line-height: 22px;
+}
+
+.formularioTabela {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 48px;
+  margin-bottom: 30px;
+}
+
+.formularioTabela h2 {
+  text-align: center;
+}
+
+.tabelaGeral {
+  text-align: left;
+  border-bottom: 1px solid #979797;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .formulario {
-    position: absolute;
-    flex-direction: row;
-    flex-flow: wrap;
-    width: 728px;
-    height: 189px;
     border: 1px solid #979797;
-    border-radius: 4px;
-  }
-
-  .tituloAdTransacao {
-    position: absolute;
+    margin: 20px;
+    height: 189px;
+    padding-bottom: 20px;
+    width: calc(100% - 40px);
   }
 
   .formulario h1 {
-    display: flex;
+    display: block;
+    margin-top: -5px;
+    text-align: center;
+    font-size: 18px;
   }
 
-  .formUm {
-    font-size: 14px;
-    margin-left: 18px;
-    margin-top: 70px;
+  .ttMercValorAdd {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .formUmTt {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .formUmTt label {
-    margin-left: -14px;
-  }
-
-  .formulario select {
-    font-size: 12px;
-    width: 138px;
-    height: 32px;
-    margin-left: -15px;
-  }
-
-  .formulario input {
-    height: 32px;
-    font-size: 12px;
+    width: 130px;
+    margin-top: 0px;
   }
 
   .formUmMercadoria {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .formUmMercadoria label {
-    margin-left: 22px;
-  }
-
-  .btnMercadoria {
-    width: 310px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 348px;
+    margin: 0px;
   }
 
   .formUmValor {
-    display: flex;
-    flex-direction: column;
+    width: 130px;
+    margin-top: 0px;
   }
 
-  .btnValor {
-    width: 135px;
-  }
-
-  .formulario button {
-    height: 32px;
+  .ttMercValorAdd button {
     width: 200px;
-    margin: 0px -225px 0px 248px;
+    position: absolute;
+    margin-top: 90.78px;
+    margin-right: -467.78px;
   }
 }
 
 @media screen and (min-width: 1112px) {
   .formulario {
-    position: absolute;
     flex-direction: column;
+    justify-content: center;
     width: 400px;
     height: 344px;
-    border: 1px solid #979797;
-    border-radius: 4px;
   }
 
-  .tituloAdTransacao {
-    margin: 20px 124px 301px;
-    justify-content: center;
-    width: 150px;
-    height: 20px;
+  .formulario h1 {
+    margin-top: 20px;
   }
 
-  .formUm {
-    margin-top: 70px;
-    font-size: 16px;
+  .ttMercValorAdd {
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   .formUmTt {
-    margin-left: 14.9px;
-    margin-top: -46px;
-  }
-
-  .formulario select {
-    width: 364.2px;
-  }
-
-  .formulario input {
-    font-size: 14px;
+    width: 100%;
   }
 
   .formUmMercadoria {
-    margin-left: 14.9px;
-    margin-top: -50px;
-  }
-
-  .formUmMercadoria label {
-    margin-left: -14.2px;
-  }
-
-  .btnMercadoria {
-    margin-left: -14.2px;
-    width: 357.2px;
+    width: 100%;
   }
 
   .formUmValor {
-    margin-top: -50px;
+    width: 100%;
   }
 
-  .btnValor {
-    width: 357.2px;
-  }
-
-  .formulario button {
-    width: 363.2px;
-    margin: 20.78px 0px 0px 18px;
+  .ttMercValorAdd button {
+    position: inherit;
+    width: 359.78px;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 }
