@@ -62,13 +62,13 @@ body {
   flex-direction: column-reverse;
   background-color: #333333;
   width: 350px;
-  left: -350px;
+  right: -350px;
   height: 100%;
   transition: all 0.5s;
 }
 
 .cabecalho input[type='checkbox']:checked ~ nav {
-  transform: translateX(350px);
+  transform: translateX(-350px);
 }
 
 .menu ul {
@@ -82,7 +82,7 @@ body {
   color: white;
 }
 
-a:hover {
+.cabecalho a:hover {
   background-color: rgb(176, 224, 230);
   color: black;
 }
