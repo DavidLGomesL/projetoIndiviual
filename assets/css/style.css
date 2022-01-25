@@ -74,12 +74,13 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 48px;
   margin-bottom: 30px;
+  border-collapse: collapse;
+  border-top: 1px solid #979797;
 }
 
 .formularioTabela h2 {
@@ -87,10 +88,15 @@ body {
 }
 
 .tabelaGeral {
+  border-spacing: 0px;
+}
+
+.tabelaGeral th,
+td,
+tr {
   text-align: left;
   border-bottom: 1px solid #979797;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 7px;
 }
 
 @media screen and (min-width: 768px) {
