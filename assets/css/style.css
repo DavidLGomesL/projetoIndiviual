@@ -141,6 +141,14 @@ tr {
     margin-top: 90.78px;
     margin-right: -467.78px;
   }
+
+  .formularioTabela {
+    border-top: none;
+  }
+
+  .formularioTabela h2 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1112px) {
