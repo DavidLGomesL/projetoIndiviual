@@ -10,26 +10,29 @@ body {
 }
 
 .cabecalho {
-  display: inline-block;
+  display: flex;
   flex-direction: row;
-  width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #e0e0e0;
 }
 
-.logo img {
-  display: flex;
-  margin: 12px 9.36px 0px 16px;
+.logo {
+  margin-left: 20px;
 }
 
 .titulo {
-  display: flex;
-  justify-content: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
   font-weight: 600;
   font-size: 18px;
-  line-height: 16px;
-  margin-left: -55px;
-  margin-top: -24px;
+  /*line-height: 16px;*/
+  margin-left: -5px;
+  margin-top: 7px;
+}
+
+.botao {
+  margin-right: 18px;
+  margin-top: 7px;
 }
 
 .menu {
@@ -79,7 +82,7 @@ body {
   color: white;
 }
 
-.menu a:hover {
+a:hover {
   background-color: rgb(176, 224, 230);
   color: black;
 }
