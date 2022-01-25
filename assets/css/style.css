@@ -5,6 +5,28 @@ body {
   font-family: 'Lato';
 }
 
+.cabecalho {
+  display: inline-block;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: #e0e0e0;
+}
+
+.logo img {
+  display: flex;
+  margin: 15px 9.36px 0px 22px;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: -50px;
+}
+
 .formulario {
   display: flex;
   flex-direction: column;
@@ -16,6 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 34px;
   justify-content: center;
 }
 
@@ -166,6 +189,8 @@ tr {
   .ttMercValorAdd {
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
   }
 
   .formUmTt {
@@ -185,5 +210,51 @@ tr {
     width: 359.78px;
     margin-top: 20px;
     margin-right: 20px;
+  }
+
+  .formularioTabela {
+    flex-direction: column;
+    justify-content: center;
+    height: 281px;
+    margin-left: 440px;
+    margin-top: -385px;
+  }
+
+  .tabelaGeral {
+    width: 100%;
+  }
+
+  .tabelaGeral th,
+  td,
+  tr {
+    height: 28px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .logo img {
+    margin-left: 200px;
+  }
+
+  .titulo {
+    margin-left: -740px;
+  }
+
+  .formulario {
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 344px;
+    margin-left: calc(40% - 400px);
+  }
+
+  .formularioTabela {
+    flex-direction: column;
+    justify-content: center;
+    height: 281px;
+    margin-left: calc(50% - 120px);
+    margin-right: calc(50% - 550px);
+    margin-top: -385px;
   }
 }
