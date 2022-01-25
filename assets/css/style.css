@@ -1,6 +1,10 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
   width: 100%;
-  margin: 0px;
   font-size: 14px;
   font-family: 'Lato';
 }
@@ -25,6 +29,64 @@ body {
   font-size: 20px;
   line-height: 24px;
   margin-top: -50px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.imagemMenu img {
+  width: 40px;
+}
+
+.cabecalho input[type='checkbox'] {
+  display: none;
+}
+
+.cabecalho nav {
+  position: absolute;
+  flex-direction: column-reverse;
+  background-color: #333333;
+  width: 350px;
+  left: -350px;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.cabecalho input[type='checkbox']:checked ~ nav {
+  transform: translateX(350px);
+}
+
+.menu ul {
+  width: 100%;
+  top: 50px;
+}
+
+.menu a {
+  display: block;
+  padding: 20px 5px;
+  color: white;
+}
+
+.menu a:hover {
+  background-color: rgb(176, 224, 230);
+  color: black;
+}
+
+.imagemMenu label {
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
 }
 
 .formulario {
