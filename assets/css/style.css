@@ -6,7 +6,7 @@
 body {
   width: 100%;
   font-size: 14px;
-  font-family: 'Lato';
+  font-family: 'latoregular';
 }
 
 .cabecalho {
@@ -241,6 +241,40 @@ tr {
 }
 
 @media screen and (min-width: 1112px) {
+  .titulo {
+    display: flex;
+    margin-left: -505px;
+  }
+
+  .cabecalho nav {
+    position: inherit;
+    background-color: #e0e0e0;
+    width: 270px;
+    margin-top: -2px;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+
+  .imagemMenu {
+    display: none;
+  }
+
+  .menu {
+    overflow: hidden;
+    background-color: #979797;
+  }
+
+  .menu a {
+    float: right;
+    display: block;
+    color: #333333;
+    font-size: 14px;
+    border: 1px solid #979797;
+    text-align: center;
+    padding: 8px 14px;
+    text-decoration: none;
+  }
+
   .formulario {
     flex-direction: column;
     justify-content: center;
@@ -300,11 +334,17 @@ tr {
 
 @media screen and (min-width: 1500px) {
   .logo img {
-    margin-left: 200px;
+    margin-left: 182px;
   }
 
   .titulo {
-    margin-left: -740px;
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .botao {
+    width: 100%;
+    margin-right: -300px;
   }
 
   .formulario {
