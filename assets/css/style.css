@@ -1,0 +1,326 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Lato';
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.titulo {
+  /*display: flex;*/
+  /*justify-content: center;*/
+  font-weight: 600;
+  font-size: 18px;
+  /*line-height: 16px;*/
+  margin-left: -5px;
+  margin-top: 7px;
+}
+
+.botao {
+  margin-right: 18px;
+  margin-top: 7px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.imagemMenu img {
+  width: 30px;
+}
+
+.cabecalho input[type='checkbox'] {
+  display: none;
+}
+
+.cabecalho nav {
+  position: absolute;
+  flex-direction: column-reverse;
+  background-color: #333333;
+  width: 350px;
+  left: -350px;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.cabecalho input[type='checkbox']:checked ~ nav {
+  transform: translateX(350px);
+}
+
+.menu ul {
+  width: 100%;
+  top: 50px;
+}
+
+.menu a {
+  display: block;
+  padding: 20px 5px;
+  color: white;
+}
+
+a:hover {
+  background-color: rgb(176, 224, 230);
+  color: black;
+}
+
+.imagemMenu label {
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.ttMercValorAdd {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 34px;
+  justify-content: center;
+}
+
+.formUm {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 0px 20px;
+}
+
+.formulario h1 {
+  display: none;
+}
+
+.formUmTt {
+  display: flex;
+  flex-direction: column;
+}
+
+.formUmMercadoria {
+  display: flex;
+  flex-direction: column;
+}
+
+.formUmValor {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario select {
+  border: 1px solid #979797;
+  border-radius: 4px;
+  color: black;
+  height: 32px;
+}
+
+.formulario input {
+  background-color: #fff;
+  color: #e0e0e0;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  height: 32px;
+}
+
+.formulario button {
+  background-color: #333333;
+  color: #fff;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 19.78px;
+  line-height: 22px;
+}
+
+.formularioTabela {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 48px;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  border-top: 1px solid #979797;
+}
+
+.formularioTabela h2 {
+  text-align: center;
+}
+
+.tabelaGeral {
+  border-spacing: 0px;
+}
+
+.tabelaGeral th,
+td,
+tr {
+  text-align: left;
+  border-bottom: 1px solid #979797;
+  padding: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .formulario {
+    border: 1px solid #979797;
+    margin: 20px;
+    height: 189px;
+    padding-bottom: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .formulario h1 {
+    display: block;
+    margin-top: -5px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .ttMercValorAdd {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .formUmTt {
+    width: 130px;
+    margin-top: 0px;
+  }
+
+  .formUmMercadoria {
+    width: 348px;
+    margin: 0px;
+  }
+
+  .formUmValor {
+    width: 130px;
+    margin-top: 0px;
+  }
+
+  .ttMercValorAdd button {
+    width: 200px;
+    position: absolute;
+    margin-top: 90.78px;
+    margin-right: -467.78px;
+  }
+
+  .formularioTabela {
+    border-top: none;
+  }
+
+  .formularioTabela h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1112px) {
+  .formulario {
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 344px;
+  }
+
+  .formulario h1 {
+    margin-top: 20px;
+  }
+
+  .ttMercValorAdd {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .formUmTt {
+    width: 100%;
+  }
+
+  .formUmMercadoria {
+    width: 100%;
+  }
+
+  .formUmValor {
+    width: 100%;
+  }
+
+  .ttMercValorAdd button {
+    position: inherit;
+    width: 359.78px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .formularioTabela {
+    flex-direction: column;
+    justify-content: center;
+    height: 281px;
+    margin-left: 440px;
+    margin-top: -385px;
+  }
+
+  .tabelaGeral {
+    width: 100%;
+  }
+
+  .tabelaGeral th,
+  td,
+  tr {
+    height: 28px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .logo img {
+    margin-left: 200px;
+  }
+
+  .titulo {
+    margin-left: -740px;
+  }
+
+  .formulario {
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 344px;
+    margin-left: calc(40% - 400px);
+  }
+
+  .formularioTabela {
+    flex-direction: column;
+    justify-content: center;
+    height: 281px;
+    margin-left: calc(50% - 120px);
+    margin-right: calc(50% - 550px);
+    margin-top: -385px;
+  }
+}

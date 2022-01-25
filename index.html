@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Projeto Individual</title>
+
+    <style>
+      @font-face {
+        font-family: 'latolight';
+        src: url('lato-light-webfont.woff2') format('woff2'),
+          url(./assets/font/lato-light-webfont.woff) format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      
+      <div class="cabecalho">
+        <div class="logo">
+          <img src="./assets/img/Ellipse 13.png" alt="logo" />
+        </div>
+        <div class="titulo">
+          <h2>Controle Financeiro</h2>
+        </div>
+
+        <div class="botao">
+          
+          <input type="checkbox" id="chec">
+          <label class="imagemMenu" for="chec">
+            <img src="./assets/img/Hamburger_icon.svg.png" alt="icone">
+          </label>
+          
+            <nav class="menu">
+              <ul class="subMenu">
+                <li><a href="">Cadastro de transações</a></li>
+                <li><a href="">Limpar dados</a></li>
+              </ul>
+            </nav>
+        </div>
+        
+      </div>
+    </header>
+    
+    <section>
+      <!--No section vai conter as partes que se relacionam ao formulario de Nova transação e o Extrato de transação.-->
+        <form class="formulario">
+          <!--Este form é responsável somente pelo formulario de Nova transação.-->
+          <h1 class="tituloAdTransacao">Nova transação</h1>
+          <div class="ttMercValorAdd">
+            <div class="formUm">
+              <div class="formUmTt">
+                <label>Tipo de transação</label>
+                <select
+                  name="tipo de transação"
+                  id="transação"
+                >
+                  <option value="select">Selecione</option>
+                  <option value="compra">Compra</option>
+                  <option value="venda">Venda</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="formUm">
+              <div class="formUmMercadoria">
+                <label for="nomeMercadoria">Nome da mercadoria</label>
+                <input
+                  class="btnMercadoria"
+                  type="text"
+                  required
+                  id="nameMercadoria"
+                  placeholder="Mercadoria"
+                />
+              </div>
+            </div>
+
+            <div class="formUm">
+              <div class="formUmValor">
+              <label for="valor">Valor</label>
+                <input
+                  class="btnValor"
+                  type="number"
+                  required
+                  name="valor"
+                  placeholder="R$ 0,00"
+                />
+              </div>
+            </div>
+          
+            <button>Adicionar transação</button>
+          </div>
+          
+        </form>
+      </div>
+      
+      <div>
+        <form class="formularioTabela">
+          <h2>Extrato de transações</h2>
+
+          <table class="tabelaGeral">
+            <div class="tabela">
+              <tr>
+                <th class="mercadoriaEValor" id="mercadoria">Mercadoria</th>
+                <th id="valor">Valor</th>
+              </tr>
+              <tr>
+                <td id="loremIpsumDolor">
+                  + lorem ipsum dolor sit amet consectetur
+                </td>
+                <td id="v1">R$ 12.999,99</td>
+              </tr>
+              <tr>
+                <td id="quisNostrud">- Quis nostrud exercitation</td>
+                <td id="v2">R$ 99,99</td>
+              </tr>
+
+              <tr>
+                <td id="loremIpsum">+ lorem ipsum</td>
+                <td id="v3">R$ 9,99</td>
+              </tr>
+
+              <div class="celulaTotal">
+                <tr>
+                  <td class="total">Total</td>
+                  <td class="numero">
+                    R$ 12.909,99
+
+                    <br />
+
+                    <span class="lucro">[Lucro]</span>
+                  </td>
+                </tr>
+              </div>
+            </div>
+          </table>
+        </form>
+      </div>
+      
+    </section>
+  </body>
+</html>
