@@ -62,21 +62,13 @@ body {
   flex-direction: column-reverse;
   background-color: #333333;
   width: 350px;
-<<<<<<< HEAD
   right: -350px;
-=======
-  left: -350px;
->>>>>>> c81ddb43d1eed7c76fc0bc53f89a803434119c69
   height: 100%;
   transition: all 0.5s;
 }
 
 .cabecalho input[type='checkbox']:checked ~ nav {
-<<<<<<< HEAD
   transform: translateX(-350px);
-=======
-  transform: translateX(350px);
->>>>>>> c81ddb43d1eed7c76fc0bc53f89a803434119c69
 }
 
 .menu ul {
@@ -90,11 +82,7 @@ body {
   color: white;
 }
 
-<<<<<<< HEAD
 .cabecalho a:hover {
-=======
-a:hover {
->>>>>>> c81ddb43d1eed7c76fc0bc53f89a803434119c69
   background-color: rgb(176, 224, 230);
   color: black;
 }
