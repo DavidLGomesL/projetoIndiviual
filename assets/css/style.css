@@ -37,11 +37,11 @@ body {
 
 .menu {
   display: flex;
-  justify-content: flex-end;
 }
 
 .menu a {
   text-decoration: none;
+  text-align: right;
   color: black;
 }
 
@@ -59,12 +59,11 @@ body {
 
 .cabecalho nav {
   position: absolute;
-  flex-direction: column-reverse;
   background-color: #333333;
   width: 350px;
   right: -350px;
   height: 100%;
-  transition: all 0.5s;
+  transition: all 0.8s;
 }
 
 .cabecalho input[type='checkbox']:checked ~ nav {
@@ -73,7 +72,7 @@ body {
 
 .menu ul {
   width: 100%;
-  top: 50px;
+  top: 70px;
 }
 
 .menu a {
