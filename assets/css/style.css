@@ -1,3 +1,5 @@
+/* inicio do código css*/
+/*primeira parte - responsividade mobile*/
 * {
   padding: 0px;
   margin: 0px;
@@ -8,7 +10,7 @@ body {
   font-size: 14px;
   font-family: 'latoregular';
 }
-
+/* No cabeçalho vai conter o menu responsivo, titulo e imagem*/
 .cabecalho {
   display: flex;
   flex-direction: row;
@@ -29,7 +31,7 @@ body {
   margin-left: -5px;
   margin-top: 7px;
 }
-
+/*construção do botão responsivo menu hamburguer*/
 .botao {
   margin-right: 18px;
   margin-top: 7px;
@@ -52,11 +54,11 @@ body {
 .imagemMenu img {
   width: 30px;
 }
-
+/*input do botão checkbox*/
 .cabecalho input[type='checkbox'] {
   display: none;
 }
-
+/*contrução da tela de transição transição*/
 .cabecalho nav {
   position: fixed;
   background-color: #333333;
@@ -85,13 +87,13 @@ body {
   background-color: rgb(176, 224, 230);
   color: black;
 }
-
+/*colocação do botão menu a frente da tela de transição*/
 .imagemMenu label {
   padding: 15px;
   position: absolute;
   z-index: 1;
 }
-
+/*inicio do primeiro formulario - formulario de nova transação*/
 .formulario {
   display: flex;
   flex-direction: column;
@@ -108,12 +110,14 @@ body {
 }
 
 .formUm {
+  /*meche no tipo de transação, mercadoria e valor*/
   display: flex;
   flex-direction: column;
   margin: 20px 20px 0px 20px;
 }
 
 .formulario h1 {
+  /*retira o titulo NOVA TRANSAÇÃO na versão mobile*/
   display: none;
 }
 
@@ -140,6 +144,7 @@ body {
 }
 
 .formulario input {
+  /*input da mercadoria e valor*/
   background-color: #fff;
   color: #333333;
   border: 1px solid #979797;
@@ -148,6 +153,7 @@ body {
 }
 
 .formulario button {
+  /*referente ao botão de adicionar transação*/
   background-color: #333333;
   color: #fff;
   border: 1px solid #979797;
@@ -157,8 +163,9 @@ body {
   margin-top: 19.78px;
   line-height: 22px;
 }
-
+/*inicio do formulario tabela de extrato de transações*/
 .formularioTabela {
+  /*resoponsável pela parte geral da tabela*/
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -172,23 +179,28 @@ body {
 }
 
 .formularioTabela h2 {
+  /*titulo extrato de transações*/
   text-align: center;
 }
 
 .tabelaGeral {
+  /*retirada dos espaços entra as bordas da tabela*/
   border-spacing: 0px;
 }
 
 .tabelaGeral th,
 td,
 tr {
+  /*estrutura da tabela onde se encontram as mercadorias e valores*/
   text-align: left;
   border-bottom: 1px solid #979797;
   padding: 7px;
 }
 
 @media screen and (min-width: 768px) {
+  /*responsividade para tela minima de 768px*/
   .formulario {
+    /*ajuste do primeiro formulario*/
     border: 1px solid #979797;
     margin: 20px;
     height: 189px;
@@ -197,12 +209,13 @@ tr {
   }
 
   .formulario h1 {
+    /*adição do titulo nova transação*/
     display: block;
     margin-top: -5px;
     text-align: center;
     font-size: 18px;
   }
-
+  /*ajuste dos inputs do primeiro formulario*/
   .ttMercValorAdd {
     flex-direction: row;
     flex-wrap: wrap;
@@ -229,7 +242,7 @@ tr {
     margin-top: 90.78px;
     margin-right: -467.78px;
   }
-
+  /*ajuste do formulario tabela*/
   .formularioTabela {
     border-top: none;
   }
@@ -240,11 +253,13 @@ tr {
 }
 
 @media screen and (min-width: 1112px) {
+  /*ajuste da responsividade para tela com tamanho mínimo de 1112px*/
   .titulo {
+    /*ajuste do titulo no cabeçalho*/
     display: flex;
     margin-left: -505px;
   }
-
+  /*ajustes no botão menu para ficarem fixos no cabelho, sem tela de transição responsiva.*/
   .cabecalho nav {
     position: inherit;
     background-color: #e0e0e0;
@@ -255,6 +270,7 @@ tr {
   }
 
   .imagemMenu {
+    /*retirada da imagem menu hamburguer*/
     display: none;
   }
 
@@ -264,6 +280,7 @@ tr {
   }
 
   .menu a {
+    /*ajustes da aparencia dos botões menu*/
     float: right;
     display: block;
     color: #333333;
@@ -273,7 +290,7 @@ tr {
     padding: 8px 14px;
     text-decoration: none;
   }
-
+  /*ajutes do primeiro formulario*/
   .formulario {
     flex-direction: column;
     justify-content: center;
@@ -282,9 +299,10 @@ tr {
   }
 
   .formulario h1 {
+    /*ajuste do título NOVA TRANSAÇÃO*/
     margin-top: 20px;
   }
-
+  /*ajuste dos inputs mercadoria e valor*/
   .ttMercValorAdd {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -303,14 +321,14 @@ tr {
   .formUmValor {
     width: 100%;
   }
-
+  /*ajuste do botão de adicionar transação*/
   .ttMercValorAdd button {
     position: inherit;
     width: 359.78px;
     margin-top: 20px;
     margin-right: 20px;
   }
-
+  /*ajuste do fomulário tabela*/
   .formularioTabela {
     flex-direction: column;
     justify-content: center;
@@ -332,21 +350,26 @@ tr {
 }
 
 @media screen and (min-width: 1500px) {
+  /*ajuste da responsividade para telas com mínimo de 1500px*/
   .logo img {
+    /*ajuste da posição da imagem logo do cabelho*/
     margin-left: 182px;
   }
 
   .titulo {
+    /*ajuste do título do cabelho*/
     width: 100%;
     margin-left: 15px;
   }
 
   .botao {
+    /*ajuste dos botões menu do cabelho*/
     width: 100%;
     margin-right: -300px;
   }
 
   .formulario {
+    /*ajuste do primeiro formulario*/
     flex-direction: column;
     justify-content: center;
     width: 400px;
@@ -355,6 +378,7 @@ tr {
   }
 
   .formularioTabela {
+    /*ajuste geral do formulario tabela*/
     flex-direction: column;
     justify-content: center;
     height: 281px;

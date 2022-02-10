@@ -4,16 +4,17 @@
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/font.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" /> <!--css de estilo da página-->
+    <link rel="stylesheet" href="./assets/css/font.css" /> <!--css da font aplicada a página-->
     <title>Projeto Individual</title>
 
   </head>
   <body>
     
     <header>
-      
-      <div class="cabecalho">
+      <!--parte responsável pela contrução do cabelho da página
+          contém imagem logo, titulo e menu do site-->
+      <div class="cabecalho"> <!--tag "pai" do cabelho-->
         <div class="logo">
           <img src="./assets/img/Ellipse 13.png" alt="logo" />
         </div>
@@ -21,7 +22,7 @@
           <h2>Controle Financeiro</h2>
         </div>
 
-        <div class="botao">
+        <div class="botao"> <!--botão menu do cabelho-->
           
           <input type="checkbox" id="chec">
           <label class="imagemMenu" for="chec">
@@ -45,14 +46,15 @@
           <!--Este form é responsável somente pelo formulario de Nova transação.-->
           <h1 class="tituloAdTransacao">Nova transação</h1>
           <div class="ttMercValorAdd">
-            <div class="formUm">
+            <div class="formUm"> <!--tag geral para tipo de transação, mercadoria e valor-->
               <div class="formUmTt">
                 <label>Tipo de transação</label>
                 <select
                   name="tipo de transação"
                   id="transação"
                 >
-                  <option value="select">Selecione</option>
+                  <option value="select">Selecione</option> <!--botão adicionado de forma extra para melhor compreensão 
+                                                              sobre a seleção de compra e venda-->
                   <option value="compra">Compra</option>
                   <option value="venda">Venda</option>
                 </select>
@@ -85,14 +87,14 @@
               </div>
             </div>
           
-            <button>Adicionar transação</button>
+            <button>Adicionar transação</button> <!--botão para adição de transações-->
           </div>
           
         </form>
       </div>
       
       <div>
-        <form class="formularioTabela">
+        <form class="formularioTabela"> <!--form responsável pela tabela de extrato de transações-->
           <h2>Extrato de transações</h2>
 
           <table class="tabelaGeral">
