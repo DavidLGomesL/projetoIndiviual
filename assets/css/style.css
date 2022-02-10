@@ -58,7 +58,7 @@ body {
 }
 
 .cabecalho nav {
-  position: absolute;
+  position: fixed;
   background-color: #333333;
   width: 350px;
   right: -350px;
