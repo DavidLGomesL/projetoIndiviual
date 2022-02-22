@@ -1,27 +1,18 @@
 //criação do arquivo js que irá interagir com a tabela.
-var transactions = [ //variavel para definir modelo de distribuição de mercadoria e valores na tabela.
-  {
-    merchandise: 'lorem ipsum dolor',
-    value:  12999.99,
-  },
+var transactionsRaw = localStorage.getItem('transactions')
+if (transactionsRaw != null) {
+  var transactions = JSON.parse(transactionsRaw)
+} else {
+  var transactions = [];
+}
 
-  {
-    merchandise: 'Quis nostrud exercitation',
-    value:  99.99,
-  },
 
-  {
-    merchandise: 'lorem ipsum',
-    value:  9.99,
-  },
-];
-
-function criaTabela(t) {
+function criaTabela() {
 
 
     currentLines = [...document.querySelectorAll('table.tabelaGeral tbody .dinamic-content')];
-    currentLines.forEach((t) => {
-      t.remove('Limpar Dados')
+    currentLines.forEach((element) => {
+      element.remove('Limpar Dados')
     })
     for (products in transactions) { //usado para inclusão dos valores formando a tabela sem precisar escrever caractere por caractere.
       document.querySelector('table.tabelaGeral tbody').innerHTML += (`<tr class="dinamic-content">
