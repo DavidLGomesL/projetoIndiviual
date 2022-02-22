@@ -42,7 +42,7 @@
     
     <section>
       <!--No section vai conter as partes que se relacionam ao formulario de Nova transação e o Extrato de transação.-->
-        <form class="formulario">
+        <form class="formulario" onsubmit="testaFormulario(event);">
           <!--Este form é responsável somente pelo formulario de Nova transação.-->
           <h1 class="tituloAdTransacao">Nova transação</h1>
           <div class="ttMercValorAdd">
@@ -87,7 +87,7 @@
               </div>
             </div>
           
-            <button>Adicionar transação</button> <!--botão para adição de transações-->
+            <button type="submit">Adicionar transação</button> <!--botão para adição de transações-->
           </div>
           
         </form>
