@@ -7,8 +7,8 @@
 
 body {
   width: 100%;
-  font-size: 14px;
-  font-family: 'latoregular';
+  font-size: 15px;
+  font-family src: url('lato-regular-webfont.woff2'), 'latoregular';
 }
 /* No cabeçalho vai conter o menu responsivo, titulo e imagem*/
 .cabecalho {
