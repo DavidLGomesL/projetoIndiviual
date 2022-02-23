@@ -26,6 +26,18 @@ function criaTabela() {
 
 function testaFormulario(e) { //função desenvolvida para registro de itens na localstorage.
   e.preventDefault();
+
+  for (i in e.target.elements['valor'].value) {
+    if ('0123456789'.indexOf(e.target.elements['valor'].value[i]) == -1) {
+      alert('Apenas números são permitidos no campo valor!')
+      return false
+    }
+  }
+
+  if (e.target.elements['valor'].value.length > 6) {
+    alert('Número invalido!')
+    return false
+  }
   
   var transactionsRaw = localStorage.getItem('transactions')
     if (transactionsRaw != null) {
@@ -44,7 +56,7 @@ if (id !== null) {
   transactions.push({
     merchandise: e.target.elements['nameMercadoria'].value,
     value: e.target.elements['valor'].value,
-    trade: e.target.elements['trade'].value
+    trade: (e.target.elements['trade'].value == 'true')
   })
 }
 localStorage.setItem('transactions', JSON.stringify(transactions)) //salva novas transações no localstorage
