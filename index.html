@@ -31,7 +31,7 @@
           
             <nav class="menu">
               <ul class="subMenu">
-                <li><a href="">Cadastro de transações</a></li>
+                <li><a id="goHome" href="">Cadastro de transações</a></li>
                 <li><a href="">Limpar dados</a></li>
               </ul>
             </nav>
@@ -50,13 +50,13 @@
               <div class="formUmTt">
                 <label>Tipo de transação</label>
                 <select
-                  name="tipo de transação"
+                  name="trade"
                   id="transação"
                 >
                   <option value="select">Selecione</option> <!--botão adicionado de forma extra para melhor compreensão 
                                                               sobre a seleção de compra e venda-->
-                  <option value="compra">Compra</option>
-                  <option value="venda">Venda</option>
+                  <option type="radio" name="trade" value="compra">Compra</option>
+                  <option type="radio" name="trade" value="venda">Venda</option>
                 </select>
               </div>
             </div>

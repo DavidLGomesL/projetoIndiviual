@@ -12,7 +12,7 @@ function criaTabela() {
 
     currentLines = [...document.querySelectorAll('table.tabelaGeral tbody .dinamic-content')];
     currentLines.forEach((element) => {
-      element.remove('Limpar Dados')
+      element.remove()
     })
     for (products in transactions) { //usado para inclusão dos valores formando a tabela sem precisar escrever caractere por caractere.
       document.querySelector('table.tabelaGeral tbody').innerHTML += (`<tr class="dinamic-content">
@@ -25,5 +25,21 @@ function criaTabela() {
 
 function testaFormulario(e) {
   e.preventDefault();
-  console.log('oi');
+  
+  var transactionsRaw = localStorage.getItem('transactions')
+    if (transactionsRaw != null) {
+      var transactions = JSON.parse(transactionsRaw)
+    } else {
+      var transactions = [];
+}
+
+transactions.push({
+  merchandise: e.target.elements['nameMercadoria'].value,
+  value: e.target.elements['valor'].value,
+  trade: e.target.elements['trade'].value
+})
+
+localStorage.setItem('transactions', JSON.stringify(transactions))
+
+document.getElementById('goHome').click()
 }
