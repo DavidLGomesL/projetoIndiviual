@@ -20,24 +20,32 @@ function criaTabela() {
           <td>${transactions[products].value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} </td> 
         </tr>
         `) //".toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})" usado para atribuir o simbolo real "R$" da moeda brasileira e para transformar os valores no formato da moeda brasileira.
+    
         
-    }
+    };
+
 };
 
 function testaFormulario(e) { //função desenvolvida para registro de itens na localstorage.
   e.preventDefault();
 
-  for (i in e.target.elements['valor'].value) {
+  /*for (i in e.target.elements['valor'].value) { //teste basico pós preenchimento do formulario.
     if ('0123456789'.indexOf(e.target.elements['valor'].value[i]) == -1) {
       alert('Apenas números são permitidos no campo valor!')
       return false
     }
-  }
+  }*/
 
-  if (e.target.elements['valor'].value.length > 6) {
+  /*var valuePattern = /^[0-9]+/g
+  if (valuePattern.test(e.target.elements['valor'].value)) {
+    alert('Apenas números são permitidos no campo valor!')
+    return false
+  }*/
+
+  /*if (e.target.elements['valor'].value.length > 6) { //teste basico pós preenchimento do formulario.
     alert('Número invalido!')
     return false
-  }
+  }*/
   
   var transactionsRaw = localStorage.getItem('transactions')
     if (transactionsRaw != null) {
@@ -85,4 +93,26 @@ if (id !== null) {
   } else {
     document.getElementById('trade-venda').checked = true
   }
+}
+
+String.prototype.reverse = function(){
+  return this.split('').reverse().join(''); 
+};
+
+function mascaraMoeda(campo,evento){
+  var tecla = (!evento) ? window.event.keyCode : evento.which;
+  var valor  =  campo.value.replace(/[^\d]+/gi,'').reverse();
+  var resultado  = "";
+  var mascara = "##.###.###,##".reverse();
+  for (var x=0, y=0; x<mascara.length && y<valor.length;) {
+    if (mascara.charAt(x) != '#') {
+      resultado += mascara.charAt(x);
+      x++;
+    } else {
+      resultado += valor.charAt(y);
+      y++;
+      x++;
+    }
+  }
+  campo.value = resultado.reverse();
 }

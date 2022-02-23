@@ -79,10 +79,12 @@
               <label for="valor">Valor</label>
                 <input
                   class="btnValor"
-                  type="number"
+                  type="text"
                   required
                   name="valor"
+                  onkeyup="mascaraMoeda(this, event)"
                   placeholder="R$ 0,00"
+                  value=""
                 />
               </div>
             </div>
