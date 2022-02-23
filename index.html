@@ -32,7 +32,7 @@
             <nav class="menu">
               <ul class="subMenu">
                 <li><a id="goHome" href="">Cadastro de transações</a></li>
-                <li><a href="">Limpar dados</a></li>
+                <li><a type="button" value="limpa" onclick="limpa()" href="">Limpar dados</a></li>
               </ul>
             </nav>
         </div>
@@ -105,6 +105,12 @@
                 <th class="mercadoriaEValor" id="mercadoria">Mercadoria</th>
                 <th id="valor">Valor</th>
               </tr>
+              <tfoot class="valorTotal">
+                <tr>
+                    <th scope="row">Total</th>
+                    <td></td>
+                </tr>
+            </tfoot>
             </div>
           </table>
         </form>

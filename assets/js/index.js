@@ -20,10 +20,16 @@ function criaTabela() {
           <td>${transactions[products].value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} </td> 
         </tr>
         `) //".toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})" usado para atribuir o simbolo real "R$" da moeda brasileira e para transformar os valores no formato da moeda brasileira.
-    
+        
         
     };
 
+};
+
+function limpa () {
+  if (document.getElementsByClassName('.dinamic-content').value != "") {
+    document.getElementsByClassName('.dinamic-content').value = "";
+  }
 };
 
 function testaFormulario(e) { //função desenvolvida para registro de itens na localstorage.
