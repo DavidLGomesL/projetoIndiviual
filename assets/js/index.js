@@ -1,10 +1,10 @@
 //criação do arquivo js que irá interagir com a tabela.
-var transactionsRaw = localStorage.getItem('transactions')
+var transactionsRaw = localStorage.getItem('transactions') // primeira parte responsável pela inclusão de itens na localstorage.
 if (transactionsRaw != null) {
   var transactions = JSON.parse(transactionsRaw)
 } else {
   var transactions = [];
-}
+};
 
 
 function criaTabela() {
@@ -20,10 +20,11 @@ function criaTabela() {
           <td>${transactions[products].value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} </td> 
         </tr>
         `) //".toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})" usado para atribuir o simbolo real "R$" da moeda brasileira e para transformar os valores no formato da moeda brasileira.
+        
     }
-}
+};
 
-function testaFormulario(e) {
+function testaFormulario(e) { //função desenvolvida para registro de itens na localstorage.
   e.preventDefault();
   
   var transactionsRaw = localStorage.getItem('transactions')
@@ -33,13 +34,15 @@ function testaFormulario(e) {
       var transactions = [];
 }
 
-transactions.push({
+transactions.push({ //vai adicionar novas transações.
   merchandise: e.target.elements['nameMercadoria'].value,
   value: e.target.elements['valor'].value,
   trade: e.target.elements['trade'].value
 })
 
-localStorage.setItem('transactions', JSON.stringify(transactions))
+localStorage.setItem('transactions', JSON.stringify(transactions)) //salva novas transações no localstorage
 
 document.getElementById('goHome').click()
-}
+};
+
+criaTabela();
