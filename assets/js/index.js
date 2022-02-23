@@ -34,15 +34,43 @@ function testaFormulario(e) { //função desenvolvida para registro de itens na 
       var transactions = [];
 }
 
-transactions.push({ //vai adicionar novas transações.
-  merchandise: e.target.elements['nameMercadoria'].value,
-  value: e.target.elements['valor'].value,
-  trade: e.target.elements['trade'].value
-})
-
+if (id !== null) {
+    transactions[id] = transactions.push({ //vai adicionar novas transações.
+      merchandise: e.target.elements['nameMercadoria'].value,
+      value: e.target.elements['valor'].value,
+      trade: e.target.elements['trade'].value
+    })
+} else {
+  transactions.push({
+    merchandise: e.target.elements['nameMercadoria'].value,
+    value: e.target.elements['valor'].value,
+    trade: e.target.elements['trade'].value
+  })
+}
 localStorage.setItem('transactions', JSON.stringify(transactions)) //salva novas transações no localstorage
 
 document.getElementById('goHome').click()
 };
 
 criaTabela();
+
+var urlPrincipal = new URL(window.location.href)
+
+var id = urlPrincipal.searchParams.get('products')
+if (id !== null) {
+  if (transactionsRaw != null) {
+    var transactions = JSON.parse(transactionsRaw)
+  } else {
+    var transactions = [];
+}
+
+  console.log(transactions[id])
+
+  document.getElementById('nameMercadoria').value = transactions[id].nameMercadoria
+  document.getElementById('valor').value = transactions[id].valor
+  if (transactions[id].trade) {
+    document.getElementById('trade-compra').checked = true
+  } else {
+    document.getElementById('trade-venda').checked = true
+  }
+}
