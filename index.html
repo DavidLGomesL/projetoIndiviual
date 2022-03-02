@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
           contém imagem logo, titulo e menu do site-->
       <div class="cabecalho"> <!--tag "pai" do cabelho-->
         <div class="logo">
-          <img src="./assets/img/Ellipse 13.png" alt="logo" />
+          <img  src="./assets/img/Ellipse 13.png" alt="logo" />
         </div>
         <div class="titulo">
           <h2>Controle Financeiro</h2>
@@ -31,8 +31,8 @@
           
             <nav class="menu">
               <ul class="subMenu">
-                <li><a id="goHome" href="">Cadastro de transações</a></li>
-                <li><a type="button" value="limpa" onclick="limpa()" href="">Limpar dados</a></li>
+                <li><a >Cadastro de transações</a></li>
+                <li><a value="limpa" href="javascript:void(0)" onclick="limparDados()">Limpar dados</a></li>
               </ul>
             </nav>
         </div>
@@ -42,7 +42,7 @@
     
     <section>
       <!--No section vai conter as partes que se relacionam ao formulario de Nova transação e o Extrato de transação.-->
-        <form class="formulario" onsubmit="testaFormulario(event);">
+        <form class="formulario">
           <!--Este form é responsável somente pelo formulario de Nova transação.-->
           <h1 class="tituloAdTransacao">Nova transação</h1>
           <div class="ttMercValorAdd">
@@ -51,7 +51,7 @@
                 <label>Tipo de transação</label>
                 <select
                   name="trade"
-                  id="transação"
+                  id="transacao"
                 >
                   <option value="select">Selecione</option> <!--botão adicionado de forma extra para melhor compreensão 
                                                               sobre a seleção de compra e venda-->
@@ -59,7 +59,7 @@
                   <option type="radio" name="trade" id="trade-venda" value="venda">Venda</option>
                 </select>
               </div>
-            </div>
+            </div> 
 
             <div class="formUm">
               <div class="formUmMercadoria">
@@ -67,9 +67,10 @@
                 <input
                   class="btnMercadoria"
                   type="text"
-                  required
+                  
                   id="nameMercadoria"
                   placeholder="Mercadoria"
+                  
                 />
               </div>
             </div>
@@ -80,45 +81,44 @@
                 <input
                   class="btnValor"
                   type="text"
-                  required
+                  
                   name="valor"
-                  onkeyup="mascaraMoeda(this, event)"
                   placeholder="R$ 0,00"
-                  value=""
                 />
               </div>
             </div>
+
+
+            
+            <input class="addTransacao" type="button" value="Adicionar transação" onclick="lerTabela()">
           
-            <button type="submit">Adicionar transação</button> <!--botão para adição de transações-->
+           
           </div>
           
         </form>
       </div>
       
       <div>
-        <form class="formularioTabela"> <!--form responsável pela tabela de extrato de transações-->
+        <div class="formularioTabela"> <!--form responsável pela tabela de extrato de transações-->
           <h2>Extrato de transações</h2>
 
-          <table class="tabelaGeral">
-            <div class="tabela">
+          <table class="tabelaGeral" id="tableGr">
+            
+              <!--Aq-->
               <tr>
                 <th class="mercadoriaEValor" id="mercadoria">Mercadoria</th>
                 <th id="valor">Valor</th>
-              </tr>
-              <tfoot class="valorTotal">
-                <tr>
-                    <th scope="row">Total</th>
-                    <td></td>
-                </tr>
-            </tfoot>
-            </div>
+              </tr> 
+              <!--Aq-->
+           
           </table>
-        </form>
+        </div>
       </div>
       
     </section>
 
     <script src="./assets/js/index.js"></script> <!--Arquivo js referente a table-->
+    <script src="./assets/js/localstorage.js"></script>
 
   </body>
 </html>

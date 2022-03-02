@@ -152,7 +152,7 @@ body {
   height: 32px;
 }
 
-.formulario button {
+.formulario .addTransacao {
   /*referente ao botão de adicionar transação*/
   background-color: #333333;
   color: #fff;
@@ -236,11 +236,12 @@ tr {
     margin-top: 0px;
   }
 
-  .ttMercValorAdd button {
+  .ttMercValorAdd .addTransacao {
     width: 200px;
     position: absolute;
     margin-top: 90.78px;
     margin-right: -467.78px;
+    z-index: -1;
   }
   /*ajuste do formulario tabela*/
   .formularioTabela {
@@ -322,7 +323,7 @@ tr {
     width: 100%;
   }
   /*ajuste do botão de adicionar transação*/
-  .ttMercValorAdd button {
+  .ttMercValorAdd addTransacao {
     position: inherit;
     width: 359.78px;
     margin-top: 20px;
