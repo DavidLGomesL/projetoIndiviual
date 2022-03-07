@@ -378,6 +378,11 @@ tr {
     margin-left: calc(40% - 400px);
   }
 
+  .formulario .addTransacao {
+    width: 358px;
+    margin-top: 257px;
+  }
+
   .formularioTabela {
     /*ajuste geral do formulario tabela*/
     flex-direction: column;
