@@ -42,7 +42,7 @@ let tipoSelecao = document.getElementsByName('trade')
 
 tabela.innerHTML += `<tr>
 
-<td class="produto">${tipoSelecao.value == 'compra' ? '-' : '+' }&nbsp;${nomeMercadoria}</td> 
+<td class="produto">${tipoSelecao.values == 'compra' ? '+' : '-' }&nbsp;${nomeMercadoria}</td> 
 
 <td class="preco">${valor}</td>
 </tr>`
@@ -52,23 +52,24 @@ tabela.innerHTML += `<tr>
 
 };
 
-/*function totalTabela () {
-  var totalTable = document.querySelector('.tabelaGeral .tbody')
-
-  totalTable.innerHTML += `<tr> 
+/*function tT () {
+  
+  document.querySelector('.totalTabela .tbody').innerHTML += `<tr> 
     <td>Total</td>
     <td>1234</td>
   </tr>`
+
 };*/
 
 function limparDados () {
   let produto = document.querySelector('.produto')
   let preco = document.querySelector('.preco')
-  produto.remove()
-  preco.remove()
+  produto.remove();
+  preco.remove();
   //localStorage.clear();
-  //localStorage.setItem('objStorage', JSON.stringify(objStorage))
+  localStorage.setItem('objStorage', JSON.stringify(objStorage))
   objStorage = [];
+  alert('Os dados serão removidos!')
 };
 
 //Formatar para moeda local

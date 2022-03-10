@@ -323,7 +323,7 @@ tr {
     width: 100%;
   }
   /*ajuste do botão de adicionar transação*/
-  .ttMercValorAdd addTransacao {
+  .ttMercValorAdd .addTransacao {
     position: inherit;
     width: 359.78px;
     margin-top: 20px;
@@ -378,7 +378,7 @@ tr {
     margin-left: calc(40% - 400px);
   }
 
-  .formulario .addTransacao {
+  .formulario input .addTransacao {
     width: 358px;
     margin-top: 257px;
   }

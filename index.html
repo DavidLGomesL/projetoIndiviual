@@ -32,7 +32,7 @@
             <nav class="menu">
               <ul class="subMenu">
                 <li><a >Cadastro de transações</a></li>
-                <li><a value="limpa" href="javascript:void(0)" onclick="limparDados()">Limpar dados</a></li>
+                <li><a value="limpa" href="javascript:void(0)" onclick="lerTabela(limparDados())">Limpar dados</a></li>
               </ul>
             </nav>
         </div>
@@ -90,7 +90,7 @@
 
 
             
-            <input type="button" value="Adicionar transação" onclick="lerTabela(); return false">
+            <input  type="button" value="Adicionar transação" onclick="lerTabela()" >
           
            
           </div>
@@ -110,7 +110,9 @@
                 <th id="valor">Valor</th>
               </tr> 
              
-           
+              
+          
+
           </table>
         </div>
       </div>
