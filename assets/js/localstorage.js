@@ -66,6 +66,7 @@ function limparDados () {
   let preco = document.querySelector('.preco')
   produto.remove();
   preco.remove();
+  
   //localStorage.clear();
   localStorage.setItem('objStorage', JSON.stringify(objStorage))
   objStorage = [];
