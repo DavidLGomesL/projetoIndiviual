@@ -32,7 +32,7 @@
             <nav class="menu">
               <ul class="subMenu">
                 <li><a >Cadastro de transações</a></li>
-                <li><a value="limpa" href="javascript:void(0)" onclick="limparDados()">Limpar dados</a></li>
+                <li><a value="limpa" href="javascript:void(0)" onclick="limparDados(); localStorage.setItem('objStorage', JSON.stringify(objStorage))">Limpar dados</a></li>
               </ul>
             </nav>
         </div>
@@ -90,7 +90,7 @@
 
 
             
-            <input  type="button" value="Adicionar transação" onclick="lerTabela()" >
+            <input  type="button" id="AdicionarTransação" value="Adicionar transação" onclick="lerTabela()" >
           
            
           </div>
@@ -110,7 +110,9 @@
                 <th id="valor">Valor</th>
               </tr> 
              
-              
+              <tfoot class="foot">
+
+              </tfoot>
           
 
           </table>
@@ -119,7 +121,6 @@
       
     </section>
 
-    <script src="./assets/js/index.js"></script> <!--Arquivo js referente a table-->
     <script src="./assets/js/localstorage.js"></script>
 
   </body>

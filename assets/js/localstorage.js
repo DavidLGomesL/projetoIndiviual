@@ -5,28 +5,27 @@
 
 // Local Storage trabalha com strings, os valores por mais que sejam lidos independete de quais forem todos são transformados em string pelo local storage 
 
-var objStorage = []  // Tendo em mente que o valor do local storage  e dado em string 
-let convertStorage = localStorage.getItem('objStorage');
+var objStorage = []  // Tendo em mente que o valor do local storage é dado em string 
+let convertStorage = localStorage.getItem('objStorage')
 if (convertStorage != null) {
-  objStorage = JSON.parse(localStorage.getItem("convertStorage"));
+  objStorage = JSON.parse(convertStorage);
+} 
+
+
+desenhaTabela()
+function desenhaTabela () {
+  for (transaction of objStorage) {
+    document.querySelector('.tabelaGeral').innerHTML += `
+  <tr>
+
+    <td class="produto">${transaction.tipo}&nbsp;${transaction.nome}</td> 
+
+    <td class="preco">${transaction.valor}</td>
+  </tr>`
+  };
+
+
 }
-
-
-
-
-// if (convertStorage)
-
-// let convertStorage = localStorage.getItem( JSON.parse('objStorage'))
-// console.log
-
-/*if (localStorage.getItem("convertStorage")) {
-  objStorage = JSON.parse(localStorage.getItem("convertStorage"));
-}*/
-
-
-// (objStorage != "" ?  ""  : "")
-
-
 
 
 
@@ -40,45 +39,80 @@ let valor = currency.value
 let tipoSelecao = document.getElementsByName('trade')
 
 
-tabela.innerHTML += `<tr>
+tabela.innerHTML += `
+  <tr>
 
-<td class="produto">${tipoSelecao.values == 'compra' ? '+' : '-' }&nbsp;${nomeMercadoria}</td> 
+    <td class="produto">${tipoSelecao.value == "compra" ? "+" : "-" }&nbsp;${nomeMercadoria}</td> 
 
-<td class="preco">${valor}</td>
-</tr>`
+    <td class="preco">${valor}</td>
+  </tr>`
 
+  objStorage.push({
+    nome: nomeMercadoria,
+    valor: valor,
+    tipo: tipoSelecao.value == "compra" ? "+" : "-"
+  })
 
-
+  localStorage.setItem('objStorage', JSON.stringify(objStorage))
 
 };
 
-/*function tT () {
-  
-  document.querySelector('.totalTabela .tbody').innerHTML += `<tr> 
-    <td>Total</td>
-    <td>1234</td>
+function totaValor () {
+
+    var total = 0;
+
+    /*var els = document.getElementsByClassName('preco')
+    var elsArray = Array.prototype.slice.call(els, 0);
+   
+
+    elsArray.forEach(function(el) {
+        total += parseFloat(el.value);
+    });
+
+    document.getElementsByClassName('qtdTotal')
+
+    document.getElementsByClassName("qtdTotal").value = total;*/
+    
+
+    document.querySelector('.tabelaGeral .foot').innerHTML += `
+  <tr>
+
+    <td>Total</td> 
+
+    <td class="qtdTotal">${total}</td>
   </tr>`
 
-};*/
+  if (objStorage.length > 0) {
+    document.querySelector('.tabelaGeral tfoot').innerHTML += `
+    <tr>
+      <td></td>
+      <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "PREJUÍZO"}</td>
+    </tr>`
+  }
+
+}
+totaValor()
+
+
+
+
 
 function limparDados () {
-  let produto = document.querySelector('.produto')
-  let preco = document.querySelector('.preco')
-  produto.remove();
-  preco.remove();
+  let produtos = document.querySelectorAll('.produto')
+  let precos = document.querySelectorAll('.preco')
   
-  //localStorage.clear();
-  localStorage.setItem('objStorage', JSON.stringify(objStorage))
+  produtos.forEach((element) => {
+    element.remove();
+  })
+  precos.forEach((element) => {
+    element.remove();
+  })
+
   objStorage = [];
+  localStorage.setItem('objStorage', JSON.stringify(objStorage))
   alert('Os dados serão removidos!')
 };
 
-//Formatar para moeda local
-/*const currencyFormat = new Intl.NumberFormat("pt-br", {
-  style: "currency",
-  currency: "BRL",
-  minimumFractionDigits: 2,
-});*/
 
 String.prototype.reverse = function(){
   return this.split('').reverse().join(''); 
