@@ -59,19 +59,14 @@ tabela.innerHTML += `
 
 function totaValor () {
 
-    var total = 0;
+  var linha = document.getElementsByClassName(".tabelaGeral .preco");
+  var resultado = document.getElementsByClassName('.foot .qtdTotal').innerHTML = 0;
 
-    /*var els = document.getElementsByClassName('preco')
-    var elsArray = Array.prototype.slice.call(els, 0);
-   
+      for (var i=0; i < linha.length; i++) {
+          resultado += Number(linha[i].innerHTML);
+      }
 
-    elsArray.forEach(function(el) {
-        total += parseFloat(el.value);
-    });
-
-    document.getElementsByClassName('qtdTotal')
-
-    document.getElementsByClassName("qtdTotal").value = total;*/
+  document.getElementsByClassName(".foot .qtdTotal").innerHTML = resultado.toFixed(8);
     
 
     document.querySelector('.tabelaGeral .foot').innerHTML += `
@@ -79,14 +74,14 @@ function totaValor () {
 
     <td>Total</td> 
 
-    <td class="qtdTotal">${total}</td>
+    <td class="qtdTotal">${resultado}</td>
   </tr>`
 
   if (objStorage.length > 0) {
     document.querySelector('.tabelaGeral tfoot').innerHTML += `
     <tr>
       <td></td>
-      <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "PREJUÍZO"}</td>
+      <td class="status">${Math.sign(resultado) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
     </tr>`
   }
 
