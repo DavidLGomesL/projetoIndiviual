@@ -40,9 +40,9 @@ let tipoSelecao = document.getElementsByName('trade')
 
 
 tabela.innerHTML += `
-  <tr>
+  <tr class="dinamic-content">
 
-    <td class="produto">${tipoSelecao.value == "compra" ? "+" : "-" }&nbsp;${nomeMercadoria}</td> 
+    <td class="produto">${tipoSelecao.value == "compra" ? "+" : "-"}&nbsp;${nomeMercadoria}</td> 
 
     <td class="preco">${valor}</td>
   </tr>`
@@ -53,20 +53,31 @@ tabela.innerHTML += `
     tipo: tipoSelecao.value == "compra" ? "+" : "-"
   })
 
+
   localStorage.setItem('objStorage', JSON.stringify(objStorage))
 
 };
 
 function totaValor () {
 
-  var linha = document.getElementsByClassName(".tabelaGeral .preco");
-  var resultado = document.getElementsByClassName('.foot .qtdTotal').innerHTML = 0;
+  var listTr = document.querySelectorAll('.dinamic-content');
+    var total = 0;
 
-      for (var i=0; i < linha.length; i++) {
-          resultado += Number(linha[i].innerHTML);
-      }
+        for (i = 0; i < listTr.length; i++) {
+            var list = listTr[i];
 
-  document.getElementsByClassName(".foot .qtdTotal").innerHTML = resultado.toFixed(8);
+            var tdValor = list.querySelectorAll('.preco');
+            var resultado = list.querySelector('.qtdTotal');
+
+        for (let i = 0; i < tdValor.length; i++) {
+            var valor = tdValor[i]
+
+            total = total + valor;
+            resultado.textContent = total;
+
+            console.log(total);
+        }
+  }
     
 
     document.querySelector('.tabelaGeral .foot').innerHTML += `
@@ -74,17 +85,18 @@ function totaValor () {
 
     <td>Total</td> 
 
-    <td class="qtdTotal">${resultado}</td>
+    <td class="qtdTotal">${total}</td>
   </tr>`
 
   if (objStorage.length > 0) {
     document.querySelector('.tabelaGeral tfoot').innerHTML += `
     <tr>
       <td></td>
-      <td class="status">${Math.sign(resultado) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
+      <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
     </tr>`
   }
 
+  console.log(total)
 }
 totaValor()
 
