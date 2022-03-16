@@ -60,23 +60,13 @@ tabela.innerHTML += `
 
 function totaValor () {
 
-  var listTr = document.querySelectorAll('.dinamic-content');
-    var total = 0;
+  let tdsValores = document.querySelectorAll('.preco')
 
-        for (i = 0; i < listTr.length; i++) {
-            var list = listTr[i];
+  let total = 0
 
-            var tdValor = list.querySelectorAll('.preco');
-            var resultado = list.querySelector('.qtdTotal');
-
-        for (let i = 0; i < tdValor.length; i++) {
-            var valor = tdValor[i]
-
-            total = total + valor;
-            resultado.textContent = total;
-
-            console.log(total);
-        }
+  for (let i = 0; i < tdsValores.length; i++) {
+    let valor = parseFloat(tdsValores[i].textContent)
+    total = total + valor
   }
     
 
@@ -86,14 +76,16 @@ function totaValor () {
     <td>Total</td> 
 
     <td class="qtdTotal">${total}</td>
-  </tr>`
+  </tr>
+  `
 
   if (objStorage.length > 0) {
     document.querySelector('.tabelaGeral tfoot').innerHTML += `
     <tr>
       <td></td>
       <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
-    </tr>`
+    </tr>
+    `
   }
 
   console.log(total)
