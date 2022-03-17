@@ -1,0 +1,96 @@
+@media screen and (min-width: 1112px) {
+  /*ajuste da responsividade para tela com tamanho mínimo de 1112px*/
+  .titulo {
+    /*ajuste do titulo no cabeçalho*/
+    display: flex;
+    margin-left: -505px;
+  }
+  /*ajustes no botão menu para ficarem fixos no cabelho, sem tela de transição responsiva.*/
+  .cabecalho nav {
+    position: inherit;
+    background-color: #e0e0e0;
+    width: 270px;
+    margin-top: -2px;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+
+  .imagemMenu {
+    /*retirada da imagem menu hamburguer*/
+    display: none;
+  }
+
+  .menu {
+    overflow: hidden;
+    background-color: #979797;
+  }
+
+  .menu a {
+    /*ajustes da aparencia dos botões menu*/
+    float: right;
+    display: block;
+    color: #333333;
+    font-size: 14px;
+    border: 1px solid #979797;
+    text-align: center;
+    padding: 8px 14px;
+    text-decoration: none;
+  }
+  /*ajutes do primeiro formulario*/
+  .formulario {
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 344px;
+  }
+
+  .formulario h1 {
+    /*ajuste do título NOVA TRANSAÇÃO*/
+    margin-top: 20px;
+  }
+  /*ajuste dos inputs mercadoria e valor*/
+  .ttMercValorAdd {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .formUmTt {
+    width: 100%;
+  }
+
+  .formUmMercadoria {
+    width: 100%;
+  }
+
+  .formUmValor {
+    width: 100%;
+  }
+  /*ajuste do botão de adicionar transação*/
+  .ttMercValorAdd .addTransacao {
+    position: inherit;
+    width: 359.78px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  /*ajuste do fomulário tabela*/
+  .formularioTabela {
+    flex-direction: column;
+    justify-content: center;
+    height: 281px;
+    margin-left: 440px;
+    margin-top: -385px;
+  }
+
+  .tabelaGeral {
+    width: 100%;
+  }
+
+  .tabelaGeral th,
+  td,
+  tr {
+    height: 28px;
+    line-height: 16px;
+  }
+}

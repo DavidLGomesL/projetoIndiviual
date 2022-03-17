@@ -50,28 +50,31 @@ tabela.innerHTML += `
   objStorage.push({
     nome: nomeMercadoria,
     valor: valor,
-    tipo: tipoSelecao.value == "compra" ? "+" : "-"
+    tipo: tipoSelecao.value == "compra" ? "-" : "+"
   })
 
 
   localStorage.setItem('objStorage', JSON.stringify(objStorage))
+  
 
-};
-
-function totaValor () {
-
-  let tdsValores = document.querySelectorAll('.preco')
+  let tdsValores = document.querySelectorAll('.preco');
 
   let total = 0
 
   for (let i = 0; i < tdsValores.length; i++) {
     let valor = parseFloat(tdsValores[i].textContent)
-    total = total + valor
+    total += valor
   }
-    
 
-    document.querySelector('.tabelaGeral .foot').innerHTML += `
-  <tr>
+  if (tipoSelecao == "Compra") {
+    for (let i = 0; i >= tdsValores.length; i--) {
+      let valor = parseFloat(tdsValores[i].textContent)
+      total -= valor
+    }
+  }
+
+  document.querySelector('.tabelaGeral .foot').innerHTML += `
+  <tr class="tabTotal">
 
     <td>Total</td> 
 
@@ -81,29 +84,34 @@ function totaValor () {
 
   if (objStorage.length > 0) {
     document.querySelector('.tabelaGeral tfoot').innerHTML += `
-    <tr>
+    <tr class="lucroPrejuizo">
       <td></td>
       <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
     </tr>
     `
   }
 
-  console.log(total)
-}
-totaValor()
+  console.log(total);
 
-
-
+};
 
 
 function limparDados () {
   let produtos = document.querySelectorAll('.produto')
   let precos = document.querySelectorAll('.preco')
+  let totals = document.querySelectorAll('.tabTotal')
+  let lP = document.querySelectorAll('.lucroPrejuizo')
   
   produtos.forEach((element) => {
     element.remove();
   })
   precos.forEach((element) => {
+    element.remove();
+  })
+  totals.forEach((element) => {
+    element.remove();
+  })
+  lP.forEach((element) => {
     element.remove();
   })
 
@@ -113,7 +121,7 @@ function limparDados () {
 };
 
 
-String.prototype.reverse = function(){
+/*String.prototype.reverse = function(){
   return this.split('').reverse().join(''); 
 };
 
@@ -133,4 +141,4 @@ function mascaraMoeda(campo,evento){
     }
   }
   campo.value = resultado.reverse();
-}
+}*/

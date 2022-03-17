@@ -1,0 +1,43 @@
+@media screen and (min-width: 1500px) {
+  /*ajuste da responsividade para telas com mínimo de 1500px*/
+  .logo img {
+    /*ajuste da posição da imagem logo do cabelho*/
+    margin-left: 182px;
+  }
+
+  .titulo {
+    /*ajuste do título do cabelho*/
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .botao {
+    /*ajuste dos botões menu do cabelho*/
+    width: 100%;
+    margin-right: -300px;
+  }
+
+  .formulario {
+    /*ajuste do primeiro formulario*/
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 344px;
+    margin-left: calc(40% - 400px);
+  }
+
+  .formulario input .addTransacao {
+    width: 358px;
+    margin-top: 257px;
+  }
+
+  .formularioTabela {
+    /*ajuste geral do formulario tabela*/
+    flex-direction: column;
+    justify-content: center;
+    height: 281px;
+    margin-left: calc(50% - 120px);
+    margin-right: calc(50% - 550px);
+    margin-top: -385px;
+  }
+}

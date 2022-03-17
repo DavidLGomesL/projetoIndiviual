@@ -1,0 +1,55 @@
+@media screen and (min-width: 768px) {
+  /*responsividade para tela minima de 768px*/
+  .formulario {
+    /*ajuste do primeiro formulario*/
+    border: 1px solid #979797;
+    margin: 20px;
+    height: 189px;
+    padding-bottom: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .formulario h1 {
+    /*adição do titulo nova transação*/
+    display: block;
+    margin-top: -5px;
+    text-align: center;
+    font-size: 18px;
+  }
+  /*ajuste dos inputs do primeiro formulario*/
+  .ttMercValorAdd {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+
+  .formUmTt {
+    width: 130px;
+    margin-top: 0px;
+  }
+
+  .formUmMercadoria {
+    width: 348px;
+    margin: 0px;
+  }
+
+  .formUmValor {
+    width: 130px;
+    margin-top: 0px;
+  }
+
+  .formulario .addTransacao {
+    width: 200px;
+    position: absolute;
+    margin-top: 90.78px;
+    margin-right: -467.78px;
+  }
+  /*ajuste do formulario tabela*/
+  .formularioTabela {
+    border-top: none;
+  }
+
+  .formularioTabela h2 {
+    font-size: 18px;
+  }
+}

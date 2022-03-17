@@ -5,6 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" /> <!--css de estilo da página-->
+    <link rel="stylesheet" href="./assets/css/mediaSeteMeiaOito.css"> <!--@media screen and (min-width: 768px)-->
+    <link rel="stylesheet" href="./assets/css/mediaMilDuzentos.css"> <!--@media screen and (min-width: 1112px)-->
+    <link rel="stylesheet" href="./assets/css/mediaMilQuinhentos.css"> <!--@media screen and (min-width: 1500px)-->
     <link rel="stylesheet" href="./assets/css/font.css" /> <!--css da font aplicada a página-->
     <title>Projeto Individual</title>
 
@@ -81,16 +84,18 @@
                 <input
                   class="btnValor"
                   type="text"
-                  onKeyUp="mascaraMoeda(this, event)"
+                  
                   name="valor"
                   placeholder="R$ 0,00"
                 />
               </div>
             </div>
 
-
+              <!--onKeyUp="mascaraMoeda(this, event)"-->
             
-            <input  type="button" id="AdicionarTransação" value="Adicionar transação" onclick="lerTabela()" >
+            <input class="addTransacao" type="button" id="AdicionarTransação" value="Adicionar transação" onclick="lerTabela()" 
+            style="z-index: -1;"
+            >
           
            
           </div>
