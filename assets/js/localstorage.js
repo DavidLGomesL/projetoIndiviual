@@ -13,7 +13,7 @@ if (convertStorage != null) {
 
 
 desenhaTabela()
-function desenhaTabela () {
+function desenhaTabela () { //Mantém a tabela
   for (transaction of objStorage) {
     document.querySelector('.tabelaGeral').innerHTML += `
   <tr>
@@ -21,7 +21,35 @@ function desenhaTabela () {
     <td class="produto">${transaction.tipo}&nbsp;${transaction.nome}</td> 
 
     <td class="preco">${transaction.valor}</td>
-  </tr>`
+  </tr>
+  `
+
+  let tdsValores = document.querySelectorAll('.preco');
+
+  let total = 0
+
+  for (let i = 0; i < tdsValores.length; i++) {
+    let valor = parseFloat(tdsValores[i].textContent)
+    total += valor;
+  }
+
+  document.querySelector('.tabelaGeral .foot').innerHTML += `
+  <tr class="tabTotal">
+
+    <td>Total</td> 
+
+    <td class="qtdTotal">${total}</td>
+  </tr>
+  `
+
+  if (objStorage.length > 0) {
+    document.querySelector('.tabelaGeral tfoot').innerHTML += `
+    <tr class="lucroPrejuizo">
+      <td></td>
+      <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
+    </tr>
+    `
+  }
   };
 
 
@@ -56,21 +84,14 @@ tabela.innerHTML += `
 
   localStorage.setItem('objStorage', JSON.stringify(objStorage))
   
-
+  //Calcula o valor da tabela, mostra total e status.
   let tdsValores = document.querySelectorAll('.preco');
 
   let total = 0
 
   for (let i = 0; i < tdsValores.length; i++) {
     let valor = parseFloat(tdsValores[i].textContent)
-    total += valor
-  }
-
-  if (tipoSelecao == "Compra") {
-    for (let i = 0; i >= tdsValores.length; i--) {
-      let valor = parseFloat(tdsValores[i].textContent)
-      total -= valor
-    }
+    total += valor;
   }
 
   document.querySelector('.tabelaGeral .foot').innerHTML += `
@@ -96,7 +117,7 @@ tabela.innerHTML += `
 };
 
 
-function limparDados () {
+function limparDados () { //Limpa a tabela
   let produtos = document.querySelectorAll('.produto')
   let precos = document.querySelectorAll('.preco')
   let totals = document.querySelectorAll('.tabTotal')
@@ -120,8 +141,8 @@ function limparDados () {
   alert('Os dados serão removidos!')
 };
 
-
-/*String.prototype.reverse = function(){
+//Mascara da tabela
+String.prototype.reverse = function(){
   return this.split('').reverse().join(''); 
 };
 
@@ -129,7 +150,7 @@ function mascaraMoeda(campo,evento){
   var tecla = (!evento) ? window.event.keyCode : evento.which;
   var valor  =  campo.value.replace(/[^\d]+/gi,'').reverse();
   var resultado  = "";
-  var mascara = "##.###.###,##".reverse();
+  var mascara = "##.###.##".reverse();
   for (var x=0, y=0; x<mascara.length && y<valor.length;) {
     if (mascara.charAt(x) != '#') {
       resultado += mascara.charAt(x);
@@ -141,4 +162,4 @@ function mascaraMoeda(campo,evento){
     }
   }
   campo.value = resultado.reverse();
-}*/
+}

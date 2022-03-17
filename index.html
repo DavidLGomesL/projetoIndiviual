@@ -84,7 +84,7 @@
                 <input
                   class="btnValor"
                   type="text"
-                  
+                  onKeyUp="mascaraMoeda(this, event)"
                   name="valor"
                   placeholder="R$ 0,00"
                 />
@@ -92,10 +92,8 @@
             </div>
 
               <!--onKeyUp="mascaraMoeda(this, event)"-->
-            
-            <input class="addTransacao" type="button" id="AdicionarTransação" value="Adicionar transação" onclick="lerTabela()" 
-            style="z-index: -1;"
-            >
+                                    
+            <input class="addTransacao" type="button" id="AdicionarTransação" value="Adicionar transação" onclick="lerTabela()" >
           
            
           </div>
