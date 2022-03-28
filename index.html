@@ -35,7 +35,7 @@
             <nav class="menu">
               <ul class="subMenu">
                 <li><a >Cadastro de transações</a></li>
-                <li><a value="limpa" href="javascript:void(0)" onclick="limparDados(); localStorage.setItem('objStorage', JSON.stringify(objStorage))">Limpar dados</a></li>
+                <li><a value="limpa" href="javascript:void(0)" onclick="return limparDados(); localStorage.setItem('objStorage', JSON.stringify(objStorage))">Limpar dados</a></li>
               </ul>
             </nav>
         </div>
@@ -56,10 +56,10 @@
                   name="trade"
                   id="transacao"
                 >
-                  <option value="select">Selecione</option> <!--botão adicionado de forma extra para melhor compreensão 
+                  <option>Selecione</option> <!--botão adicionado de forma extra para melhor compreensão 
                                                               sobre a seleção de compra e venda-->
-                  <option type="radio" name="trade" id="trade-compra" value="compra">Compra</option>
-                  <option type="radio" name="trade" id="trade-venda" value="venda">Venda</option>
+                  <option value="compra">Compra</option>
+                  <option value="venda">Venda</option>
                 </select>
               </div>
             </div> 
@@ -113,9 +113,7 @@
                 <th id="valor">Valor</th>
               </tr> 
              
-              <tfoot class="foot">
-
-              </tfoot>
+             
           
 
           </table>
