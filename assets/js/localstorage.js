@@ -1,6 +1,4 @@
 
-
-
 // Local Storage
 
 // Local Storage trabalha com strings, os valores por mais que sejam lidos independete de quais forem todos são transformados em string pelo local storage 
@@ -14,12 +12,26 @@ if (convertStorage != null) {
 
 desenhaTabela()
 function desenhaTabela () { //Mantém a tabela
-  
+ 
   let total = 0
 
+  if (objStorage.length === 0) {
+    document.getElementById("nTransacoes");
+    console.log(objStorage.length === 0);
+    `
+    <tr>
+      <td class="nenhumaTransacao" >Nenhuma transação cadastrada.</td>
+    </tr>
+    `
+  } else {
+    document.getElementById("nTransacoes").style.display = 'none';
+    console.log(objStorage);
+  }
+
+
   objStorage.forEach((item) => {
-    total += parseFloat(item.valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1')) * parseFloat(item.tipo+'1')
-  })
+    total += parseFloat(item.valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1')) * parseInt(item.tipo+'1')
+  }); total
 
     for (transaction of objStorage) {
         document.querySelector('.tabelaGeral').innerHTML += `
@@ -42,24 +54,32 @@ function desenhaTabela () { //Mantém a tabela
         <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
       </tr>
       `
-      
-      console.log(total)
+
     };
 
-  
 }
 
-
-
 function lerTabela () {
-  // Dom nome e valor dos input
-  let nome = document.querySelector('.btnMercadoria')
-  let nomeMercadoria = nome.value
-  let currency = document.querySelector('.btnValor')
-  let valor = currency.value
-  let tipoSelecao = document.querySelector('#transacao').value == 'compra' ? '-' : '+'
-  let total = 0
-
+    // Dom nome e valor dos input
+    let nome = document.querySelector('.btnMercadoria')
+    let nomeMercadoria = nome.value
+    let currency = document.querySelector('.btnValor')
+    let valor = currency.value
+    let tipoSelecao = document.querySelector('#transacao').value == 'compra' ? '-' : '+'
+    let total = 0
+    
+    if (objStorage.length === 0) {
+      document.getElementById("nTransacoes");
+      console.log(objStorage.length === 0);
+      `
+      <tr>
+        <td class="nenhumaTransacao" >Nenhuma transação cadastrada.</td>
+      </tr>
+      `
+    } else {
+      document.getElementById("nTransacoes").style.display = 'none';
+      console.log(objStorage);
+    }
  
   document.querySelector('.tabelaGeral').innerHTML += `
       <tr>
@@ -92,10 +112,10 @@ function lerTabela () {
   localStorage.setItem('objStorage', JSON.stringify(objStorage))
 
   objStorage.forEach((item) => {
-    total += parseFloat(item.valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1')) * parseFloat(item.tipo+'1')
-  })
+    total += parseFloat(item.valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1')) * parseInt(item.tipo+'1')
+  }); total
 
-  total
+  
 
 };
 
