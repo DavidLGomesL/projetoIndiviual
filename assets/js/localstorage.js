@@ -9,13 +9,8 @@ if (convertStorage != null) {
   objStorage = JSON.parse(convertStorage);
 } 
 
+if (objStorage.length === 0) {
 
-desenhaTabela()
-function desenhaTabela () { //Mantém a tabela
- 
-  let total = 0
-
-  if (objStorage.length === 0) {
     document.getElementById("nTransacoes");
     console.log(objStorage.length === 0);
     `
@@ -23,15 +18,17 @@ function desenhaTabela () { //Mantém a tabela
       <td class="nenhumaTransacao" >Nenhuma transação cadastrada.</td>
     </tr>
     `
-  } else {
+    document.querySelector(".foot").style.display = 'none';
+
+} else if (objStorage.length !== 0) {
+
     document.getElementById("nTransacoes").style.display = 'none';
     console.log(objStorage);
-  }
 
+}
 
-  objStorage.forEach((item) => {
-    total += parseFloat(item.valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1')) * parseInt(item.tipo+'1')
-  }); total
+desenhaTabela()
+function desenhaTabela () { //Mantém a tabela
 
     for (transaction of objStorage) {
         document.querySelector('.tabelaGeral').innerHTML += `
@@ -42,22 +39,12 @@ function desenhaTabela () { //Mantém a tabela
         <td class="preco">${transaction.valor}</td>
       </tr>
 
-      <tr class="tabTotal">
-
-          <td>Total</td> 
-
-          <td class="qtdTotal">${total}</td>
-      </tr>
-      <!--Mostra status de Lucro ou Prejuízo-->
-      <tr class="lucroPrejuizo">
-        <td></td>
-        <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
-      </tr>
       `
-
-    };
+    };    
 
 }
+
+
 
 function lerTabela () {
     // Dom nome e valor dos input
@@ -67,19 +54,6 @@ function lerTabela () {
     let valor = currency.value
     let tipoSelecao = document.querySelector('#transacao').value == 'compra' ? '-' : '+'
     let total = 0
-    
-    if (objStorage.length === 0) {
-      document.getElementById("nTransacoes");
-      console.log(objStorage.length === 0);
-      `
-      <tr>
-        <td class="nenhumaTransacao" >Nenhuma transação cadastrada.</td>
-      </tr>
-      `
-    } else {
-      document.getElementById("nTransacoes").style.display = 'none';
-      console.log(objStorage);
-    }
  
   document.querySelector('.tabelaGeral').innerHTML += `
       <tr>
@@ -93,7 +67,7 @@ function lerTabela () {
 
           <td>Total</td> 
 
-          <td class="qtdTotal">${total}</td>
+          <td class="qtdTotal">${total += parseFloat(valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1'))}</td>
       </tr>
       <!--Mostra status de Lucro ou Prejuízo-->
       <tr class="lucroPrejuizo">
@@ -111,14 +85,32 @@ function lerTabela () {
 
   localStorage.setItem('objStorage', JSON.stringify(objStorage))
 
-  objStorage.forEach((item) => {
-    total += parseFloat(item.valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1')) * parseInt(item.tipo+'1')
-  }); total
-
-  
-
 };
 
+function tabelaTotal () {
+  let total = 0
+
+  objStorage.forEach((item) => {
+    total += parseFloat(item.valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1')) * parseInt(item.tipo+'1')
+  }); 
+  total
+
+  document.querySelector('.tabelaGeral .foot').innerHTML += `
+      <tr class="tabTotal">
+
+          <td>Total</td> 
+
+          <td class="qtdTotal">${total}</td>
+      </tr>
+      <!--Mostra status de Lucro ou Prejuízo-->
+      <tr class="lucroPrejuizo">
+        <td></td>
+        <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
+      </tr>
+      `
+
+}
+tabelaTotal();
 
 function limparDados () { //Limpa a tabela
 
