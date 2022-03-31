@@ -44,8 +44,6 @@ function desenhaTabela () { //Mantém a tabela
 
 }
 
-
-
 function lerTabela () {
     // Dom nome e valor dos input
     let nome = document.querySelector('.btnMercadoria')
@@ -82,12 +80,11 @@ function lerTabela () {
     tipo: tipoSelecao
   })
 
-
   localStorage.setItem('objStorage', JSON.stringify(objStorage))
 
 };
 
-function tabelaTotal () {
+function tabelaTotal () { //Calcula o total e atualiza o valor
   let total = 0
 
   objStorage.forEach((item) => {
