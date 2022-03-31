@@ -51,7 +51,7 @@ function lerTabela () {
     let currency = document.querySelector('.btnValor')
     let valor = currency.value
     let tipoSelecao = document.querySelector('#transacao').value == 'compra' ? '-' : '+'
-    let total = 0
+    
  
   document.querySelector('.tabelaGeral').innerHTML += `
       <tr>
@@ -59,18 +59,6 @@ function lerTabela () {
         <td class="produto">${tipoSelecao}&nbsp;${nomeMercadoria}</td> 
 
         <td class="preco">${valor}</td>
-      </tr>
-
-      <tr class="tabTotal">
-
-          <td>Total</td> 
-
-          <td class="qtdTotal">${total += parseFloat(valor.replaceAll('.','').replaceAll(',','').replace(/([0-9][0-9])$/g, '.$1'))}</td>
-      </tr>
-      <!--Mostra status de Lucro ou Prejuízo-->
-      <tr class="lucroPrejuizo">
-        <td></td>
-        <td class="status">${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}</td>
       </tr>
       `
 
